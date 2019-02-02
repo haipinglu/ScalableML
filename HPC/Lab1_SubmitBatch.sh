@@ -4,7 +4,7 @@
 #$ -l rmem=4G #number of memery
 #$ -o COM6012_Lab1
 #$ -j y # normal and error outputs into a single file
-#$ -M <your email> #Notify you by email, remove this line if you don't like
+#$ -M youremail@shef.ac.uk #Notify you by email, remove this line if you don't like
 #$ -m ea #Email you when it finished or aborted
 #$ -cwd # Run job from current directory
 

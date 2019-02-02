@@ -8,9 +8,12 @@ spark = SparkSession.builder \
 sc = spark.sparkContext
 sc.setLogLevel("WARN")
 
-logFile=spark.read.text("Data/NASA_access_log_Aug95.gz")
-hostsJapan = logFile.filter(logFile.value.contains(".uk")).count()
+logFile=spark.read.text("../Data/NASA_access_log_Aug95.gz").cache()
 
-print("\n\nHello Spark: There are %i hosts from UK.\n\n" % (hostsJapan))
+hostsJapan = logFile.filter(logFile.value.contains(".jp")).count()
+hostsUK = logFile.filter(logFile.value.contains(".uk")).count()
+
+print("\n\nHello Spark: There are %i hosts from UK.\n" % (hostsUK))
+print("Hello Spark: There are %i hosts from Japan.\n\n" % (hostsJapan))
 
 spark.stop()
