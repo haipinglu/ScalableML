@@ -15,4 +15,4 @@ The materials are built with references to the following sources:
 Many thanks to 
 * Mike Croucher, Neil Lawrence, Will Furnass, and Twin Karmakharm for their inputs and inspirations.
 * Mauricio A Álvarez for jointly working on this course since we joined Sheffield together.
-* Our teaching assistants (demonstrators) and students contributed in various ways.
+* Our teaching assistants (demonstrators) and students who have contributed in various ways.
