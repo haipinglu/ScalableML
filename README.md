@@ -9,7 +9,7 @@ The second half will be taught by **Mauricio A Álvarez**.
 
 ## Acknowledgement
 The materials are built with references to the following sources:
-* The PySpark tutorial by [Wenqiang Feng](http://web.utk.edu/~wfeng1/): [PDF - Learning Apache Spark with Python Release v1.0](https://runawayhorse001.github.io/LearningApacheSpark/pyspark.pdf), [GitHub Project Page](https://github.com/runawayhorse001/LearningApacheSpark)
+* The [PySpark tutorial](https://runawayhorse001.github.io/LearningApacheSpark/) by [Wenqiang Feng](http://web.utk.edu/~wfeng1/): [PDF - Learning Apache Spark with Python Release v1.0](https://runawayhorse001.github.io/LearningApacheSpark/pyspark.pdf), [GitHub Project Page](https://github.com/runawayhorse001/LearningApacheSpark)
 * The official [Apach Spark documentations](https://spark.apache.org/)
 * The [**Introduction to Apache Spark** course by Prof. Anthony D. Joseph, University of California, Berkeley](https://www.edx.org/course/introduction-apache-spark-uc-berkeleyx-cs105x)
 
