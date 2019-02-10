@@ -6,6 +6,7 @@
 * Session 4: Scalable K-means clustering
 * Session 5: Scalable PCA for dimensionality reduction
 
+## Acknowledgement
 The materials are built with references to the following sources.
 * Wenqiang Feng, [Learning Apache Spark with Python Release v1.0](https://runawayhorse001.github.io/LearningApacheSpark/pyspark.pdf)
 * The official [Apach Spark documentations](https://spark.apache.org/)
