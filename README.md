@@ -5,6 +5,7 @@
 * Session 3: Scalable matrix factorisation for collaborative filtering recommender systems
 * Session 4: Scalable K-means clustering
 * Session 5: Scalable PCA for dimensionality reduction
+
 The second half will be taught by **Mauricio A Álvarez**.
 
 ## Acknowledgement
