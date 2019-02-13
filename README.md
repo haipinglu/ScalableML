@@ -4,7 +4,7 @@
 * Session 2: RDD, DataFrame, ML pipeline, & parallelization
 * Session 3: Scalable matrix factorisation for collaborative filtering recommender systems
 * Session 4: Scalable K-means clustering
-* Session 5: Scalable PCA for dimensionality reduction
+* Session 5: Scalable PCA for dimensionality reduction (and **data types** in Spark)
 
 The second half will be taught by **Mauricio A Álvarez**.
 
