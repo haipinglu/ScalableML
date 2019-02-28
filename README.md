@@ -15,6 +15,6 @@ The materials are built with references to the following sources:
 * The [**Introduction to Apache Spark** course by Prof. Anthony D. Joseph, University of California, Berkeley](https://www.edx.org/course/introduction-apache-spark-uc-berkeleyx-cs105x)
 
 Many thanks to 
-* Mike Croucher, Neil Lawrence, Will Furnass, and Twin Karmakharm for their inputs and inspirations.
+* Mike Croucher, Neil Lawrence, Will Furnass, Twin Karmakharm, and Vamsi Sai Turlapati for their inputs and inspirations.
 * Mauricio A Álvarez for jointly working on this course since we joined Sheffield together.
 * Our teaching assistants (demonstrators) and students who have contributed in various ways.
