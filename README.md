@@ -1,13 +1,11 @@
 # COM6012 Scalable Machine Learning - University of Sheffield
-## Spring 2019 by Haiping Lu for the first half (five sessions)
+## Spring 2019 by Haiping Lu (for Sessions 1--5) and Mauricio A Álvarez (for Sessions 6--10)
 * Session 1: Introduction to Spark and ShARC (HPC)
 * Session 2: RDD, DataFrame, ML pipeline, & parallelization
 * Session 3: Scalable matrix factorisation for collaborative filtering recommender systems
 * Session 4: Scalable K-means clustering
 * Session 5: Scalable PCA for dimensionality reduction (and **data types** in Spark)
 * Session 6: Decision trees
-
-The second half will be taught by **Mauricio A Álvarez**.
 
 ## Acknowledgement
 The materials are built with references to the following sources:
@@ -18,5 +16,4 @@ The materials are built with references to the following sources:
  
 Many thanks to 
 * Mike Croucher, Neil Lawrence, Will Furnass, Twin Karmakharm, and Vamsi Sai Turlapati for their inputs and inspirations.
-* Mauricio A Álvarez for jointly working on this course since we joined Sheffield together.
 * Our teaching assistants (demonstrators) and students who have contributed in various ways.
