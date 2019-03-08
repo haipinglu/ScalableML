@@ -5,6 +5,7 @@
 * Session 3: Scalable matrix factorisation for collaborative filtering recommender systems
 * Session 4: Scalable K-means clustering
 * Session 5: Scalable PCA for dimensionality reduction (and **data types** in Spark)
+* Session 6: Decision trees
 
 The second half will be taught by **Mauricio A Álvarez**.
 
@@ -13,6 +14,7 @@ The materials are built with references to the following sources:
 * The [PySpark tutorial](https://runawayhorse001.github.io/LearningApacheSpark/) by [Wenqiang Feng](http://web.utk.edu/~wfeng1/): [PDF - Learning Apache Spark with Python Release v1.0](https://runawayhorse001.github.io/LearningApacheSpark/pyspark.pdf), [GitHub Project Page](https://github.com/runawayhorse001/LearningApacheSpark)
 * The official [Apach Spark documentations](https://spark.apache.org/)
 * The [**Introduction to Apache Spark** course by Prof. Anthony D. Joseph, University of California, Berkeley](https://www.edx.org/course/introduction-apache-spark-uc-berkeleyx-cs105x)
+* The book [**Spark: The Definitive Guide**](https://github.com/databricks/Spark-The-Definitive-Guide) by Bill Chambers and Matei Zaharia.
 
 Many thanks to 
 * Mike Croucher, Neil Lawrence, Will Furnass, Twin Karmakharm, and Vamsi Sai Turlapati for their inputs and inspirations.
