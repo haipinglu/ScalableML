@@ -6,6 +6,7 @@
 * Session 4: Scalable K-means clustering
 * Session 5: Scalable PCA for dimensionality reduction (and **data types** in Spark)
 * Session 6: Decision trees
+* Session 7: Advanced decision trees
 
 ## Acknowledgement
 The materials are built with references to the following sources:
