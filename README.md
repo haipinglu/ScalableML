@@ -7,6 +7,7 @@
 * Session 5: Scalable PCA for dimensionality reduction (and **data types** in Spark)
 * Session 6: Decision trees
 * Session 7: Advanced decision trees
+* Session 8: Scalable logistic regression
 
 ## Acknowledgement
 The materials are built with references to the following sources:
