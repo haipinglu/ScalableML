@@ -8,8 +8,8 @@
 * Session 6: Decision trees
 * Session 7: Advanced decision trees
 * Session 8: Scalable logistic regression
-* Session 9: Scalable generalised linear models
-* Session 10: Apache Spark in the Cloud (invited lecture by Dr Michael Smith)
+* Session 9: Scalable generalized linear models
+* Session 10: Apache Spark in the Cloud (invited lecture by [Dr Michael Smith)](http://www.michaeltsmith.org.uk/?page_id=11)
 
 ## Acknowledgement
 The materials are built with references to the following sources:
