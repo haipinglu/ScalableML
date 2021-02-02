@@ -1,5 +1,5 @@
-# COM6012 Scalable Machine Learning - University of Sheffield
-## Spring 2021 by Haiping Lu (1-5) and Mauricio A Álvarez (6-10)
+## COM6012 Scalable Machine Learning - University of Sheffield
+### Spring 2021 by Haiping Lu (1-5) and Mauricio A Álvarez (6-10)
 * Session 1: Introduction to Spark and HPC
 * Session 2: RDD, DataFrame, ML pipeline, & parallelization
 * Session 3: Scalable matrix factorisation for collaborative filtering in recommender systems
@@ -11,7 +11,9 @@
 * Session 9: Scalable neural networks
 * Session 10: Apache Spark in the Cloud (guest lecture by [Dr Michael Smith)](http://www.michaeltsmith.org.uk/?page_id=11)
 
-## Acknowledgement
+You can also download the [Spring 2020 version](https://github.com/haipinglu/ScalableML/archive/v2020.zip) for preview or reference.
+
+### Acknowledgement
 The materials are built with references to the following sources:
 * The [PySpark tutorial](https://runawayhorse001.github.io/LearningApacheSpark/) by [Wenqiang Feng](http://web.utk.edu/~wfeng1/): [PDF - Learning Apache Spark with Python Release v1.0](https://runawayhorse001.github.io/LearningApacheSpark/pyspark.pdf), [GitHub Project Page](https://github.com/runawayhorse001/LearningApacheSpark)
 * The official [Apach Spark documentations](https://spark.apache.org/)
