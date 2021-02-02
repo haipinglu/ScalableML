@@ -19,12 +19,11 @@ You can also download the [Spring 2020 version](https://github.com/haipinglu/Sca
 
 The materials are built with references to the following sources:
 
-* The official [Apach Spark documentations](https://spark.apache.org/). *Note: the latest information is here.*
-* The [PySpark tutorial](https://runawayhorse001.github.io/LearningApacheSpark/) by [Wenqiang Feng](http://web.utk.edu/~wfeng1/) with [PDF - Learning Apache Spark with Python Release v1.0](https://runawayhorse001.github.io/LearningApacheSpark/pyspark.pdf). Also see [GitHub Project Page](https://github.com/runawayhorse001/LearningApacheSpark). *Note: last update Feb 2020.*
-* The [**Introduction to Apache Spark** course by Prof. Anthony D. Joseph, University of California, Berkeley](https://www.edx.org/course/introduction-apache-spark-uc-berkeleyx-cs105x). *Note: archived.*
-* [**Spark: The Definitive Guide**](https://books.google.co.uk/books/about/Spark.html?id=urjpAQAACAAJ&redir_esc=y) by B. Chambers and M. Zaharia, with a [code repository](https://github.com/databricks/Spark-The-Definitive-Guide). *Note: published in 2018, possibly outdated.*
+* The official [Apach Spark documentations](https://spark.apache.org/). *Note: the **latest information** is here.*
+* The [PySpark tutorial](https://runawayhorse001.github.io/LearningApacheSpark/) by [Wenqiang Feng](http://web.utk.edu/~wfeng1/) with [PDF - Learning Apache Spark with Python Release v1.0](https://runawayhorse001.github.io/LearningApacheSpark/pyspark.pdf). Also see [GitHub Project Page](https://github.com/runawayhorse001/LearningApacheSpark). *Note: last update in Feb 2020.*
+* The [**Introduction to Apache Spark** course by A. D. Joseph, University of California, Berkeley](https://www.edx.org/course/introduction-apache-spark-uc-berkeleyx-cs105x). *Note: archived.*
 
 Many thanks to
 
 * Mike Croucher, Neil Lawrence, Will Furnass, Twin Karmakharm, and Vamsi Sai Turlapati for their inputs and inspirations since 2016.
-* Our teaching assistants (demonstrators) and students who have contributed in many ways since 2017.
+* Our teaching assistants and students who have contributed in many ways since 2017.
