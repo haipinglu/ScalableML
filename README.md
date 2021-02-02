@@ -2,6 +2,8 @@
 
 ### Spring 2021 by Haiping Lu (1-5) and Mauricio A Álvarez (6-10)
 
+This edition use [**PySpark 3.0.1**](https://spark.apache.org/docs/latest/api/python/index.html#), the [latest stable release of Spark](https://spark.apache.org/releases/spark-release-3-0-1.html).
+
 * Session 1: Introduction to Spark and HPC
 * Session 2: RDD, DataFrame, ML pipeline, & parallelization
 * Session 3: Scalable matrix factorisation for collaborative filtering in recommender systems
