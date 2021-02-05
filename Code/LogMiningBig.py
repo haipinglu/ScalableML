@@ -1,3 +1,5 @@
+"""Log mining on big data"""
+
 from pyspark.sql import SparkSession
 
 spark = SparkSession.builder \
@@ -7,7 +9,7 @@ spark = SparkSession.builder \
     .getOrCreate()
 
 sc = spark.sparkContext
-sc.setLogLevel("WARN")
+sc.setLogLevel("WARN")  # This can only affect the log level after it is executed.
 
 logFile=spark.read.text("../Data/NASA_access_log_Aug95.gz").cache()
 
