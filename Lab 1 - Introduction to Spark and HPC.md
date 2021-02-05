@@ -17,7 +17,7 @@
 - [Spark Quick Start](https://spark.apache.org/docs/3.0.1/quick-start.html) (Choose **Python** rather than the default *scala*)
 - Chapters 2 to 4 of [PySpark tutorial](https://runawayhorse001.github.io/LearningApacheSpark/pyspark.pdf) (several sections in Chapter 3 can be safely skipped)
 
-**<span style="color:red">Note - Please read before proceeding</span>**:
+**Note - Please READ before proceeding**:
 
 - HPC nodes are **shared** resources (**like buses/trains**) relying on considerate usage of every user. When requesting resources, if you ask for too much (e.g. 50 cores), it will take a long time to get allocated, particularly during "*rush hours*" (e.g. close to deadlines) and once allocated, it will leave much less for the others. If everybody is asking for too much, the system won't work and everyone suffers.
 - We have five nodes (each with 40 cores, 768GB RAM) reserved for this module. You can specify `-P rse-com6012` (e.g. after `qrshx`) to get access. However, these nodes are not always more available, e.g. if all of us are using it. There are **100+** regular nodes, many of which may be idle.
@@ -26,7 +26,7 @@
 
 ## 1. Connect to HPC and Install Spark
 
-You **<span style="color:red">must</span>** first connect to the [university's VPN](https://www.sheffield.ac.uk/it-services/vpn) unless you are on the campus network, which is unlikely during the lockdown.
+You **MUST** first connect to the [university's VPN](https://www.sheffield.ac.uk/it-services/vpn) unless you are on the campus network, which is unlikely during the lockdown.
 
 ### 1.1 Connect to ShARC HPC via SSH
 
