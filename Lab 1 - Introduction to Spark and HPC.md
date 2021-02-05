@@ -227,7 +227,7 @@ mkdir com6012
 cd com6012
 ```
 
-Let us make a copy of our teaching materials at this directory via
+Let us make a copy of our teaching materials at this directory via (if you have cloned it before and want to overwrite it, you can delete the cloned version via `rm -rf ScalableML`).
 
 ```sh
 git clone --depth 1 https://github.com/haipinglu/ScalableML
@@ -406,10 +406,12 @@ spark-submit ../Code/LogMiningBig.py
 ```
 
 - Get necessary files on your ShARC.
-- Start a session with command `qrshx`
-- Under appropriate directory (e.g. `HPC`) submit yur job via the `qsub` comand
+- Start a session with command `qrshx`.
+- Go to the `HPC` directory to submit your job via the `qsub` command.
+- The output file will be under `HPC`.
 
 ```sh
+cd HPC
 qsub Lab1_SubmitBatch.sh # or qsub HPC/Lab1_SubmitBatch.sh if you are at /home/abc1de/com6012/ScalableML
 ```
 
