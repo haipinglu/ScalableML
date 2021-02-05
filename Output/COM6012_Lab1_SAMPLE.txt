@@ -1,0 +1,44 @@
+Conda uses environments to load different sets of Python packages
+type conda env list to see the environments availible.
+21/02/05 01:41:34 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+21/02/05 01:41:39 INFO SparkContext: Running Spark version 3.0.1
+21/02/05 01:41:39 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+21/02/05 01:41:39 INFO ResourceUtils: ==============================================================
+21/02/05 01:41:39 INFO ResourceUtils: Resources for spark.driver:
+
+21/02/05 01:41:39 INFO ResourceUtils: ==============================================================
+21/02/05 01:41:39 INFO SparkContext: Submitted application: COM6012 Spark Intro
+21/02/05 01:41:39 INFO SecurityManager: Changing view acls to: abc1de
+21/02/05 01:41:39 INFO SecurityManager: Changing modify acls to: abc1de
+21/02/05 01:41:39 INFO SecurityManager: Changing view acls groups to: 
+21/02/05 01:41:39 INFO SecurityManager: Changing modify acls groups to: 
+21/02/05 01:41:39 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(abc1de); groups with view permissions: Set(); users  with modify permissions: Set(abc1de); groups with modify permissions: Set()
+21/02/05 01:41:41 INFO Utils: Successfully started service 'sparkDriver' on port 43906.
+21/02/05 01:41:41 INFO SparkEnv: Registering MapOutputTracker
+21/02/05 01:41:41 INFO SparkEnv: Registering BlockManagerMaster
+21/02/05 01:41:41 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+21/02/05 01:41:41 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+21/02/05 01:41:41 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+21/02/05 01:41:41 INFO DiskBlockManager: Created local directory at /mnt/fastdata/abc1de/blockmgr-1c41a953-ded1-44eb-a15a-d8fbd4c551f2
+21/02/05 01:41:41 INFO MemoryStore: MemoryStore started with capacity 408.9 MiB
+21/02/05 01:41:41 INFO SparkEnv: Registering OutputCommitCoordinator
+21/02/05 01:41:41 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+21/02/05 01:41:42 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://sharc-node153.shef.ac.uk:4040
+21/02/05 01:41:42 INFO Executor: Starting executor ID driver on host sharc-node153.shef.ac.uk
+21/02/05 01:41:42 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 43223.
+21/02/05 01:41:42 INFO NettyBlockTransferService: Server created on sharc-node153.shef.ac.uk:43223
+21/02/05 01:41:42 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+21/02/05 01:41:42 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, sharc-node153.shef.ac.uk, 43223, None)
+21/02/05 01:41:42 INFO BlockManagerMasterEndpoint: Registering block manager sharc-node153.shef.ac.uk:43223 with 408.9 MiB RAM, BlockManagerId(driver, sharc-node153.shef.ac.uk, 43223, None)
+21/02/05 01:41:42 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, sharc-node153.shef.ac.uk, 43223, None)
+21/02/05 01:41:42 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, sharc-node153.shef.ac.uk, 43223, None)
+21/02/05 01:41:44 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/abc1de/com6012/ScalableML/HPC/spark-warehouse').
+21/02/05 01:41:44 INFO SharedState: Warehouse path is 'file:/home/abc1de/com6012/ScalableML/HPC/spark-warehouse'.
+
+
+Hello Spark: There are 35924 hosts from UK.
+
+Hello Spark: There are 71600 hosts from Japan.
+
+

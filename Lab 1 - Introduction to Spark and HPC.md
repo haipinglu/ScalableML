@@ -26,7 +26,7 @@
 
 ## 1. Connect to HPC and Install Spark
 
-You **must** first connect to the [university's VPN](https://www.sheffield.ac.uk/it-services/vpn) unless you are on the campus network, which is unlikely during the lockdown.
+You **<span style="color:red">must</span>** first connect to the [university's VPN](https://www.sheffield.ac.uk/it-services/vpn) unless you are on the campus network, which is unlikely during the lockdown.
 
 ### 1.1 Connect to ShARC HPC via SSH
 
@@ -227,11 +227,15 @@ mkdir com6012
 cd com6012
 ```
 
-Let us make a copy of our teaching materials at this directory via (if you have cloned it before and want to overwrite it, you can delete the cloned version via `rm -rf ScalableML`).
+Let us make a copy of our teaching materials at this directory via
 
 ```sh
 git clone --depth 1 https://github.com/haipinglu/ScalableML
 ```
+
+If `ScalableML` is not empty (e.g. you have cloned a copy already), this will give you an error. You need to delete the cloned version (the whole folder) via `rm -rf ScalableML`. Be careful that you can **NOT** undo this delete so make sure **you do not have anything valuable (e.g. your assignment) there** if you do this delete. 
+
+You are advised to create a **separate folder** for your own work under `com6012`, e.g. `mywork`.
 
 Let us check
 
@@ -342,7 +346,7 @@ Hello Spark: There are 11 hosts from Japan.
 
 ```
 
-The output is verbose so I did not show all. We can set the log level easily after `sparkContext` is created but not before (it is a bit complicated). I leave two blank lines before printing the result so it is early to see.
+The output is verbose so I did not show all (see `Output/COM6012_Lab1_SAMPLE.txt` for the verbose output example). We can set the log level easily after `sparkContext` is created but not before (it is a bit complicated). I leave two blank lines before printing the result so it is early to see.
 
 ## 4. Big Data Log Mining with Spark
 
@@ -390,7 +394,7 @@ Create a file `Lab1_SubmitBatch.sh`
 #$ -l h_rt=6:00:00  #time needed
 #$ -pe smp 2 #number of cores
 #$ -l rmem=8G #number of memery
-#$ -o COM6012_Lab1.output #This is where your output and errors are logged.
+#$ -o ../Output/COM6012_Lab1.txt  #This is where your output and errors are logged.
 #$ -j y # normal and error outputs into a single file (the file above)
 #$ -M youremail@shef.ac.uk #Notify you by email, remove this line if you don't like
 #$ -m ea #Email you when it finished or aborted
@@ -402,7 +406,7 @@ module load apps/python/conda
 
 source activate myspark
 
-spark-submit ../Code/LogMiningBig.py
+spark-submit ../Code/LogMiningBig.py  # .. is a relative path, meaning one level up
 ```
 
 - Get necessary files on your ShARC.
@@ -417,7 +421,7 @@ qsub Lab1_SubmitBatch.sh # or qsub HPC/Lab1_SubmitBatch.sh if you are at /home/a
 
 Check the status of your queuing/running job(s) `qstat` (jobs not shown are finished already).
 
-Check your output file, which is **`COM6012_Lab1.txt`** in the `HPC` folder specified with option **`-o`** above. You can change it to a name you like. The results are
+Check your output file, which is **`COM6012_Lab1.txt`** in the `Output` folder specified with option **`-o`** above. You can change it to a name you like. A sample output file named `COM6012_Lab1_SAMPLE.txt` is now in the GitHub `Output` folder. The results are
 
 ```sh
 Hello Spark: There are 35924 hosts from UK.
@@ -425,33 +429,38 @@ Hello Spark: There are 35924 hosts from UK.
 Hello Spark: There are 71600 hosts from Japan.
 ```
 
-## 5. Exercises
+## 5. Exercises (reference solutions will be provided on the following Monday)
 
-## 6. Additional ideas to explore
+The analytic task you are doing above is *Log Mining*. You can imaging nowadays, log files are big and manual analysis will be time consuming. Follow examples above, answer the following questions on **NASA_access_log_Aug95.gz**.
 
-### More mining questions (completing three or more questions is considered as completion of this exercise):
+1. How many requests are there in total?
+2. How many requests are from `uplherc.up.com`?
+3. How many requests are on 15th August 1995?
+4. How many 404 (page not found) errors are there in total?
+5. How many 404 (page not found) errors are there on 15th August?
+6. How many 404 (page not found) errors from `uplherc.up.com` are there on 15th August?
 
-#### Easier questions
-- How many requests in total?
-- How many requests on a particular day (e.g., 15th August)?
-- How many 404 (page not found) errors in total?
-- How many 404 (page not found) errors on a particular day (e.g., 15th August)?
-- How many requests from a particular host (e.g.,uplherc.up.com)?
-- Any other question that you are interested in.
+You are encouraged to try out in the pyspark shell first to figure out the right solutions and then write a Python script, e.g. `Lab1_exercise.py` with a batch file (e.g. `Lab1_Exercise_Batch.sh` to produce the output neatly under `Output`, e.g. in a file `Lab1_exercise.txt`.
 
-#### More challenging questions that will become easier to answer in Session 2 (optional for Session 1)
+## 6. Additional ideas to explore (*optional*, NO solutions will be provided)
+
+### More log mining questions
+
+You are encouraged to explore these challenging questions but we will not provide solutions. Session 2 will make answering these questions easier. 
+
 - How many **unique** hosts on a particular day (e.g., 15th August)?
 - How many **unique** hosts in total (i.e., in August 1995)?
 - Which host is the most frequent visitor?
 - How many different types of return codes?
 - How many requests per day on average?
-- How many requests per post on average?
-- Any other question that you are interested in.
+- How many requests per host on average?
+- Any other question that you (or your **imagined clients**) are interested in to find out.
 
-### The effects of caching (recommended)
+### The effects of caching
+
 - **Compare** the time taken to complete your jobs **with and without** `cache()`.
 
-# Acknowledgements
+## 7. Acknowledgements
 
 Many thanks to Twin, Will, Mike, Vamsi for their kind help and all those kind contributors of open resources.
 
