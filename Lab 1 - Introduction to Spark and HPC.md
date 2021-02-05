@@ -417,7 +417,13 @@ qsub Lab1_SubmitBatch.sh # or qsub HPC/Lab1_SubmitBatch.sh if you are at /home/a
 
 Check the status of your queuing/running job(s) `qstat` (jobs not shown are finished already).
 
-Check your output file, which is **`COM6012_Lab1.output`** specified with option **`-o`** above. You can change it to a name you like.
+Check your output file, which is **`COM6012_Lab1.txt`** in the `HPC` folder specified with option **`-o`** above. You can change it to a name you like. The results are
+
+```sh
+Hello Spark: There are 35924 hosts from UK.
+
+Hello Spark: There are 71600 hosts from Japan.
+```
 
 ## 5. Exercises
 
