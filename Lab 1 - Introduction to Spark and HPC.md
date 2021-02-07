@@ -461,6 +461,10 @@ You are encouraged to explore these more challenging questions by consulting the
 
 - **Compare** the time taken to complete your jobs **with and without** `cache()`.
 
+### The effects of the number of cores
+
+- **Compare** the time taken to complete your jobs with 2, 4, 8, 16, and 32 cores.
+
 ## 7. Acknowledgements
 
 Many thanks to Twin, Will, Mike, Vamsi for their kind help and all those kind contributors of open resources.
