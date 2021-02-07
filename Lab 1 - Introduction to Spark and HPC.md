@@ -149,7 +149,7 @@ Here we provide detailed instructions only for Windows.
   - Check: open a command prompt and type `java -version`. If you can see the version displayed, congratulations. Otherwise, check the above.
 - Install Python
   - Install [Python 3.6+](https://www.python.org/downloads/). Open a command and type `python --version` to check your version to be 3.6+.
-- Install PySpark
+- Install PySpark (Alternatively, you may try `pip install pyspark==3.0.1`)
   - Download Spark **3.0.1** for Hadoop **2.7**, i.e. `spark-3.0.1-bin-hadoop2.7.tgz`.
   - Extract the `.tgz` file (e.g. using 7zip) into `C:\Spark` so that extracted files are at `C:\Spark\spark-3.0.1-bin-hadoop2.7`.
   - Set the environment variables: 
