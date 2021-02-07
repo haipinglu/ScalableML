@@ -82,7 +82,7 @@ You **must** see `(myspark) [abc1de@sharc-nodeXXX ~]$`, i.e. **(myspark)** in fr
 
 When you are asked whether to proceed, say `y`
 
-#### Run spark
+#### Run pyspark
 
 `pyspark`
 
