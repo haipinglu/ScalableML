@@ -189,7 +189,7 @@ Run pyspark (optionally, specify to use multiple cores):
 pyspark  # pyspark --master local[4] for 4 cores
 ```
 
-You will see the spark splash above. `spark` (SparkSession) and `sc` (SparkContext) are automatically created.
+You will see the spark splash above. `spark` ([SparkSession](https://spark.apache.org/docs/2.1.0/api/python/pyspark.sql.html?highlight=sparksession#pyspark.sql.SparkSession)) and `sc` ([SparkContext](https://spark.apache.org/docs/latest/api/python/pyspark.html#pyspark.SparkContext)) are automatically created.
 
 Check your SparkSession and SparkContext object and you will see something like
 
