@@ -17,6 +17,7 @@
 - [Spark Quick Start](https://spark.apache.org/docs/3.0.1/quick-start.html) (Choose **Python** rather than the default *scala*)
 - Chapters 2 to 4 of [PySpark tutorial](https://runawayhorse001.github.io/LearningApacheSpark/pyspark.pdf) (several sections in Chapter 3 can be safely skipped)
 - Reference: [PySpark documentation](https://spark.apache.org/docs/latest/api/python/index.html#)
+- Reference: [PySpark source code](https://github.com/apache/spark/tree/master/python)
 
 **Note - Please READ before proceeding**:
 
@@ -412,7 +413,7 @@ spark-submit ../Code/LogMiningBig.py  # .. is a relative path, meaning one level
 
 - Get necessary files on your ShARC.
 - Start a session with command `qrshx`.
-- Go to the `HPC` directory to submit your job via the `qsub` command.
+- Go to the `HPC` directory to submit your job via the `qsub` command (can be run at the **login node**).
 - The output file will be under `HPC`.
 
 ```sh
