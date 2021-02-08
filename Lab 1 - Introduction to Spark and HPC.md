@@ -436,11 +436,11 @@ Hello Spark: There are 71600 hosts from Japan.
 The analytic task you are doing above is *Log Mining*. You can imaging nowadays, log files are big and manual analysis will be time consuming. Follow examples above, answer the following questions on **NASA_access_log_Aug95.gz**.
 
 1. How many requests are there in total?
-2. How many requests are from `uplherc.up.com`?
+2. How many requests are from `gateway.timken.com`?
 3. How many requests are on 15th August 1995?
 4. How many 404 (page not found) errors are there in total?
 5. How many 404 (page not found) errors are there on 15th August?
-6. How many 404 (page not found) errors from `uplherc.up.com` are there on 15th August?
+6. How many 404 (page not found) errors from `gateway.timken.com` are there on 15th August?
 
 You are encouraged to try out in the pyspark shell first to figure out the right solutions and then write a Python script, e.g. `Lab1_exercise.py` with a batch file (e.g. `Lab1_Exercise_Batch.sh` to produce the output neatly under `Output`, e.g. in a file `Lab1_exercise.txt`.
 
