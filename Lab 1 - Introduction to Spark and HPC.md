@@ -38,7 +38,9 @@ If you still have problem logging in, email me 1) your username; 2) a connection
 
 Following the [official instructions](https://docs.hpc.shef.ac.uk/en/latest/hpc/connecting.html) for [Windows](https://docs.hpc.shef.ac.uk/en/latest/hpc/connecting.html#ssh-client-software-on-windows) or [Mac OS/X and Linux](https://docs.hpc.shef.ac.uk/en/latest/hpc/connecting.html#ssh-client-software-on-mac-os-x-and-linux) to open a terminal and connect to sharc via SSH by
 
-`ssh -X $USER@$sharc.shef.ac.uk`
+```sh
+ssh -X $USER@sharc.shef.ac.uk  # -X is optional as we do not show graphics directly so simply ssh $USER@sharc.shef.ac.uk will do
+```
 
 You need to replace `$USER` with your username, let's assume it is `abc1de`. If successful, you should see 
 
