@@ -32,7 +32,7 @@ You **MUST** first connect to the [university's VPN](https://www.sheffield.ac.uk
 
 ### 1.1 Connect to ShARC HPC via SSH
 
-Follow the [official instruction](https://docs.hpc.shef.ac.uk/en/latest/hpc/index.html) from our university. I have get your HPC account created already (first step done). Use your university **username** such as `abc18de` and the associated password to log in. Note that you are requried to use [Multi-factor authentication (MFA)](https://www.sheffield.ac.uk/it-services/vpn). If you have problem logging in, please contact [it-servicedesk@sheffield.ac.uk](mailto:it-servicedesk@sheffield.ac.uk).
+Follow the [official instruction](https://docs.hpc.shef.ac.uk/en/latest/hpc/index.html) from our university. I have get your HPC account created already (first step done). Use your university **username** such as `abc18de` and the associated password to log in. You are requried to use [Multi-factor authentication (MFA)](https://www.sheffield.ac.uk/it-services/vpn) to connect to VPN. If you have problem logging in, please contact [it-servicedesk@sheffield.ac.uk](mailto:it-servicedesk@sheffield.ac.uk).
 
 If you still have problem logging in, email me 1) your username; 2) a connection status of your VPN, 3) a screen capture of the error message (**never send me your password**). I will try to see whether I identify what the problem is. If you can log in but encounter HPC-related problem, you can email [hpc@sheffield.ac.uk](hpc@sheffield.ac.uk) for help.
 
