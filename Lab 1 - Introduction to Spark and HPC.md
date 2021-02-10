@@ -169,7 +169,9 @@ Now open a command prompt and type `pyspark`. You should see pyspark 3.0.1 runni
 
 **From this point on, we will assume that you are using the HPC terminal unless otherwise stated**. Run PySpark shell on your own machine can do the same job.
 
-## 2. Run Spark
+## 2. Run PySpark
+
+Once PySpark has been installed, after _each_ log-in, you need to do the following to run PySpark.
 
 ### Get a node and activate myspark
 
