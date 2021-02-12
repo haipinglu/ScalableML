@@ -184,7 +184,7 @@ Once PySpark has been installed, after _each_ log-in, you need to do the followi
    source activate myspark
   ```
 
-  Alternatively, put `HPC/myspark.sh` under your *root* directory (see above on how to transfer files) and do `source myspark.sh` will run these three commands in sequence. You could modify it further to suit yourself better.
+  Alternatively, put `HPC/myspark.sh` under your *root* directory (see above on how to transfer files) and run the above three commands in sequence via  `source myspark.sh` (see more details [here](https://docs.hpc.shef.ac.uk/en/latest/hpc/modules.html#convenient-ways-to-set-up-your-environment-for-different-projects)). You could modify it further to suit yourself better.
 
 ### Interactive shell
 
