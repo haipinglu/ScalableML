@@ -5,7 +5,7 @@
 ## Study schedule
 
 - [Task 1](#1-connect-to-hpc-and-install-spark): To finish by Wednesday. **Critical**
-- [Task 2](#2-run-spark): To finish by Wednesday. **Critical**
+- [Task 2](#2-run-pyspark): To finish by Wednesday. **Critical**
 - [Task 3](#3-log-mining-with-spark---example): To finish by Thursday. **Essential**
 - [Task 4](#4-big-data-log-mining-with-spark): To finish by Thursday. **Essential**
 - [Task 5](#5-exercises-reference-solutions-will-be-provided-on-the-following-monday): To finish before the next Monday. ***Exercise***
