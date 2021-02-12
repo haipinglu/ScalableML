@@ -14,7 +14,7 @@
 **Suggested reading**:
 
 - [Spark Overview](https://spark.apache.org/docs/latest/index.html)
-- [Spark Quick Start](https://spark.apache.org/docs/3.0.1/quick-start.html) (Choose **Python** rather than the default *Scala*)
+- [Spark Quick Start](https://spark.apache.org/docs/latest/quick-start.html) (Choose **Python** rather than the default *Scala*)
 - Chapters 2 to 4 of [PySpark tutorial](https://runawayhorse001.github.io/LearningApacheSpark/pyspark.pdf) (several sections in Chapter 3 can be safely skipped)
 - Reference: [PySpark documentation](https://spark.apache.org/docs/latest/api/python/index.html#)
 - Reference: [PySpark source code](https://github.com/apache/spark/tree/master/python)
