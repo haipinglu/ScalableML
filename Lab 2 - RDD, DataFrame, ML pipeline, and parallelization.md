@@ -31,7 +31,7 @@
 
 ## 1. RDD and Shared Variables
 
-### Get a node and start pyspark
+### Get started
 
 Firstly, we follow the standard steps as in Task 2 of Lab 1 but with some variations in settings, i.e. to request **4 cores** for an interactive shell. If the request *could not be scheduled*, try to reduce the number of cores requested. We also install `numpy` to our environment for later use.
 
@@ -84,7 +84,7 @@ def inside(p):
     return x*x + y*y < 1
 
 NUM_SAMPLES = 10000000
-count = sc.parallelize(range(0, NUM_SAMPLES)).filter(inside).count()
+count = sc.parallelize(range(0, NUM_SAMPLES),8).filter(inside).count()
 print("Pi is roughly %f" % (4.0 * count / NUM_SAMPLES))
 # Pi is roughly 3.140974
 ```
@@ -267,8 +267,7 @@ A list of some of the available ML features is available [here](http://spark.apa
 **Clarification on whether Estimator is a transformer**. See [Estimators](https://spark.apache.org/docs/latest/ml-pipeline.html#estimators)
 > An Estimator abstracts the concept of a learning algorithm or any algorithm that fits or trains on data. Technically, an Estimator implements a method fit(), which accepts a DataFrame and produces a Model, which is a Transformer. For example, a learning algorithm such as LogisticRegression is an Estimator, and calling fit() trains a LogisticRegressionModel, which is a Model and hence a **Transformer**.
 
-
-### Linear Regression Example
+### Example: Linear Regression for Advertising
 
 The example below is based on **Section 8.1** of [PySpark tutorial](https://runawayhorse001.github.io/LearningApacheSpark/pyspark.pdf). 
 
@@ -333,7 +332,7 @@ testData.show(5)
 # only showing top 5 rows
 ```
 
-####  Fit a Linear Regression Model and Perform prediction
+#### Fit a linear regression Model and perform prediction
 
 More details on parameters can be found in the [Python API documentation](https://spark.apache.org/docs/latest/api/python/pyspark.ml.html#pyspark.ml.regression.LinearRegression).
 
@@ -370,7 +369,7 @@ print("Root Mean Squared Error (RMSE) on test data = %g" % rmse)
 # Root Mean Squared Error (RMSE) on test data = 1.92078
 ```
 
-### Machine Learning Pipeline Example
+### Example: Machine Learning Pipeline for Document Classification
 
 This example is from the [ML Pipeline API](https://spark.apache.org/docs/latest/ml-pipeline.html), with additional explanations.
 
@@ -448,14 +447,14 @@ Make predictions on test documents and print columns of interest.
 ```python
 prediction = model.transform(test)
 prediction.show()
-+---+------------------+--------------------+--------------------+--------------------+---------------              -----+----------+
-| id|              text|               words|            features|       rawPrediction|         probab              ility|prediction|
-+---+------------------+--------------------+--------------------+--------------------+---------------              -----+----------+
-|  4|       spark i j k|    [spark, i, j, k]|(262144,[19036,68...|[-1.6609033227473...|[0.159640773878              74...|       1.0|
-|  5|             l m n|           [l, m, n]|(262144,[1303,526...|[1.64218895265635...|[0.837832568547              66...|       0.0|
-|  6|spark hadoop spark|[spark, hadoop, s...|(262144,[173558,1...|[-2.5980142174392...|[0.069266331329              76...|       1.0|
-|  7|     apache hadoop|    [apache, hadoop]|(262144,[68303,19...|[4.00817033336806...|[0.982157533344              42...|       0.0|
-+---+------------------+--------------------+--------------------+--------------------+---------------              -----+----------+
+# +---+------------------+--------------------+--------------------+--------------------+--------------------+----------+
+# | id|              text|               words|            features|       rawPrediction|         probability|prediction|
+# +---+------------------+--------------------+--------------------+--------------------+--------------------+----------+
+# |  4|       spark i j k|    [spark, i, j, k]|(262144,[19036,68...|[-1.6609033227473...|[0.15964077387874...|       1.0|
+# |  5|             l m n|           [l, m, n]|(262144,[1303,526...|[1.64218895265635...|[0.83783256854766...|       0.0|
+# |  6|spark hadoop spark|[spark, hadoop, s...|(262144,[173558,1...|[-2.5980142174392...|[0.06926633132976...|       1.0|
+# |  7|     apache hadoop|    [apache, hadoop]|(262144,[68303,19...|[4.00817033336806...|[0.98215753334442...|       0.0|
+# +---+------------------+--------------------+--------------------+--------------------+--------------------+----------+
 
 selected = prediction.select("id", "text", "probability", "prediction")
 selected.show()
@@ -483,23 +482,39 @@ for row in selected.collect():
 
 Starting from this lab, you need to use *as many DataFrame functions as possible*.
 
+### Log mining
+
 1. On HPC, download the description of the NASA access log data to the `Data` directory via
 
     ```sh
     wget ftp://ita.ee.lbl.gov/html/contrib/NASA-HTTP.html
     ```
 
-2. Load the Aug95 NASA access log data in Lab 1 and create a DataFrame with FIVE columns by **specifying** the schema according to the description in the downloaded html file. Use this DataFrame for the following questions.
-3. Find out the number of **unique** hosts in total (i.e. in August 1995)?
-4. Find out the most frequent visitor, i.e. the host with the largest number of visits.
-5. Find out the average number of requests per post.
+    Load the Aug95 NASA access log data in Lab 1 and create a DataFrame with FIVE columns by **specifying** the schema according to the description in the downloaded html file. Use this DataFrame for the following questions.
+
+2. Find out the number of **unique** hosts in total (i.e. in August 1995)?
+3. Find out the most frequent visitor, i.e. the host with the largest number of visits.
+
+### Linear regression for advertising
+
+4. Add regularisation to the [linear regression for advertising example](#Example-Linear-Regression-for-Advertising) and evaluate the prediction performance against the performance without any regularisation. Study at least three different regularisation settings.
+
+### Logistic regression for document classification
+
+5. Construct another test dataset for the [machine learning pipeline for document classification example](#Example-Machine-Learning-Pipeline-for-Document-Classification) with three test document samples: `"pyspark hadoop"`; `"spark a b c"`; `"mapreduce spark"` and report the prediction probabilities and the predicted labels for these three sample.
 
 ## 5. Additional ideas to explore (*optional*)
 
 **Note**: NO solutions will be provided for this part.
 
-- Find out the number of **unique** hosts on a particular day (e.g., 15th August).
-- Find out the number of **unique** return codes.
-- Find out the average number of requests per day.
+### $\pi$ estimation
+
+- Change the number of partitions to a range of values (e.g. 2, 4, 8, 16, ...) and study the time cost for each value (e.g. by plotting the time cost against the number of partitions).
+- Change the number of samples to study the variation in precision and time cost.
+
+### More log mining and machine learning
+
 - Find out the mean and standard deviation of the reply byte size.
+- Other questions in Lab 1 Task 6.
 - Explore more CSV data of your interest via Google or at [Sample CSV data](https://support.spatialkey.com/spatialkey-sample-csv-data/), including insurance, real estate, and sales transactions.
+- Explore the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets.php) to build machine learning pipelines in PySpark for some datasets of your interest.
