@@ -269,7 +269,7 @@ A list of some of the available ML features is available [here](http://spark.apa
 
 ### Example: Linear Regression for Advertising
 
-The example below is based on **Section 8.1** of [PySpark tutorial](https://runawayhorse001.github.io/LearningApacheSpark/pyspark.pdf). 
+The example below is based on **Section 8.1** of [PySpark tutorial](https://runawayhorse001.github.io/LearningApacheSpark/pyspark.pdf).
 
 #### Convert the data to dense vector (features and label)
 
@@ -296,7 +296,7 @@ transformed.show(5)
 # only showing top 5 rows
 ```
 
-The labels here are real numbers and this is a **regression** problem. For **classification** problem, you may need to transform labels (e.g., *disease*,*healthy*) to indices with a featureIndexer in Step 5, **Section 8.1** of [PySpark tutorial]
+The labels here are real numbers and this is a **regression** problem. For **classification** problem, you may need to transform labels (e.g., *disease*,*healthy*) to indices with a featureIndexer in Step 5, **Section 8.1** of [PySpark tutorial](https://runawayhorse001.github.io/LearningApacheSpark/pyspark.pdf).
 
 #### Split the data into training and test sets (40% held out for testing)
 
@@ -304,7 +304,7 @@ The labels here are real numbers and this is a **regression** problem. For **cla
 (trainingData, testData) = transformed.randomSplit([0.6, 0.4])
 ```
 
-Check your train and test data as follows. It is a good practice to **keep tracking your data during prototype phase**.
+Check your train and test data as follows. It is a good practice to *keep tracking your data during prototype phase*.
 
 ```python
 trainingData.show(5)
