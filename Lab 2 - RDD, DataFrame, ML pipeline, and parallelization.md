@@ -1,4 +1,4 @@
-# Lab 2 - RDD, DataFrame, ML pipeline, and parallelization
+# Lab 2 - RDD, DataFrame, ML Pipeline, and Parallelization
 
 [COM6012 Scalable Machine Learning **2021**](https://github.com/haipinglu/ScalableML) by [Haiping Lu](http://staffwww.dcs.shef.ac.uk/people/H.Lu/) at The University of Sheffield
 
