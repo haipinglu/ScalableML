@@ -5,7 +5,7 @@
 ## Study schedule
 
 - [Task 1](#1-RDD-and-Shared-Variables): To finish by Wednesday. **Essential**
-- [Task 2](#2-Data-Frame): To finish by Wednesday. **Essential**
+- [Task 2](#2-DataFrame): To finish by Wednesday. **Essential**
 - [Task 3](#3-Machine-Learning-Library-and-Pipelines): To finish by Thursday. **Essential**
 - [Task 4](#4-exercises): To finish before the next Monday. ***Exercise***
 - [Task 5](#5-additional-ideas-to-explore-optional): To explore further. *Optional*
@@ -128,7 +128,7 @@ accum.value
 # 20
 ```
 
-## 2. Data Frame
+## 2. DataFrame
 
 Along with the introduction of `SparkSession`, the `resilient distributed dataset` (RDD) was replaced by [`dataset`](http://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.Dataset). Again, these are objects that can be worked on in parallel. The available operations are:
 
