@@ -425,7 +425,12 @@ cd HPC
 qsub Lab1_SubmitBatch.sh # or qsub HPC/Lab1_SubmitBatch.sh if you are at /home/abc1de/com6012/ScalableML
 ```
 
-Check the status of your queuing/running job(s) `qstat` (jobs not shown are finished already).
+Make sure that you are at the correct directory and the file exists using `pwd` (the current working directory) and `ls` (list the content). Check the status of your queuing/running job(s) using `qstat` (jobs not shown are finished already). `qw` means the job is in the queue and waiting to be scheduled. `eqw` means the job is waiting in error state, in which case you should check the error and use `qdel JOB_ID` to delete the job. If you want to print out the working directory when your code is running, you would use
+
+```python
+import os
+print(os.getcwd())
+```
 
 Check your output file, which is **`COM6012_Lab1.txt`** in the `Output` folder specified with option **`-o`** above. You can change it to a name you like. A sample output file named `COM6012_Lab1_SAMPLE.txt` is now in the GitHub `Output` folder. The results are
 
