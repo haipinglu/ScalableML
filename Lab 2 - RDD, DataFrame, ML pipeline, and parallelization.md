@@ -109,9 +109,9 @@ broadcastVar.value
 # [1, 2, 3]
 ```
 
-#### [Accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.html#broadcast-variables)
+#### [Accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.html#accumulators)
 
-[Accumulators](https://spark.apache.org/docs/latest/api/java/org/apache/spark/Accumulator.html) are variables that are only “added” to through an associative and commutative operation and can therefore be efficiently supported in parallel. They can be used to implement counters (as in `MapReduce`) or sums.
+Accumulators are variables that are only “added” to through an associative and commutative operation and can therefore be efficiently supported in parallel. They can be used to implement counters (as in `MapReduce`) or sums.
 
 An accumulator is created from an initial value `v` by calling `SparkContext.accumulator(v)`
 Cluster tasks can then add to it using the `add` method. However, they cannot read its value. Only the dirver program can read the accumulator's value using its `value` method.
@@ -273,7 +273,7 @@ The example below is based on **Section 8.1** of [PySpark tutorial](https://runa
 
 #### Convert the data to dense vector (features and label)
 
-Let us convert the above data in CSV format to a typical (feature, label) pair for supervised learning
+Let us convert the above data in CSV format to a typical (feature, label) pair for supervised learning. Here we use the [`Vectors` API](https://spark.apache.org/docs/latest/api/python/pyspark.ml.html#pyspark.ml.linalg.Vectors). You may also review the [lambda expressions in python](https://docs.python.org/3/tutorial/controlflow.html#lambda-expressions).
 
 ```python
 from pyspark.sql import Row
