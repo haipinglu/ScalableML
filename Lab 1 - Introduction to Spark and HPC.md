@@ -425,7 +425,7 @@ cd HPC
 qsub Lab1_SubmitBatch.sh # or qsub HPC/Lab1_SubmitBatch.sh if you are at /home/abc1de/com6012/ScalableML
 ```
 
-Two important notes
+[Two important notes](#two-important-notes)
 
 - Make sure that your `.sh` file, e.g. `myfile.sh`, has Linux/Unix rather than Windows line ending. To check, do the following on HPC
   
