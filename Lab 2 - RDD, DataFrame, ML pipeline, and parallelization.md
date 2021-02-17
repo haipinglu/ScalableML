@@ -38,7 +38,7 @@ Firstly, we follow the standard steps as in Task 2 of Lab 1 but with some variat
    ```sh
    qrshx -P rse-com6012 -pe smp 4 # request 4 CPU cores using our reserved queue
    source myspark.sh # assuming HPC/myspark.sh is under the root directory, otherwise, see Lab 1 Task 2
-   conda install -y numpy # install numpy, to be used in Task 3.
+   conda install -y numpy # install numpy, to be used in Task 3. This ONLY needs to be done ONCE. NOT every time.
    cd com6012/ScalableML # our main working directory
    pyspark --master local[4] # start pyspark with 4 cores requested above.
   ```
@@ -89,7 +89,7 @@ print("Pi is roughly %f" % (4.0 * count / NUM_SAMPLES))
 # Pi is roughly 3.140974
 ```
 
-You can change `NUM_SAMPLES` to see the difference in precision and time cost.
+Note that we did not control the seed above so you are not likely to get exactly the same number `3.140974`. You can change `NUM_SAMPLES` to see the difference in precision and time cost.
 
 ### [Shared Variables](https://spark.apache.org/docs/latest/rdd-programming-guide.html#shared-variables)
 
@@ -301,34 +301,34 @@ The labels here are real numbers and this is a **regression** problem. For **cla
 #### Split the data into training and test sets (40% held out for testing)
 
 ```python
-(trainingData, testData) = transformed.randomSplit([0.6, 0.4])
+(trainingData, testData) = transformed.randomSplit([0.6, 0.4], 6012)
 ```
 
-Check your train and test data as follows. It is a good practice to *keep tracking your data during prototype phase*.
+We set the `seed=6012` in the above (see the [randomSplit API](https://spark.apache.org/docs/latest/api/python/pyspark.sql.html#pyspark.sql.DataFrame.randomSplit) )Check your train and test data as follows. It is a good practice to *keep tracking your data during prototype phase*.
 
 ```python
-trainingData.show(5)
+# trainingData.show(5)
 # +---------------+-----+
 # |       features|label|
 # +---------------+-----+
 # | [4.1,11.6,5.7]|  3.2|
 # | [5.4,29.9,9.4]|  5.3|
+# |[7.8,38.9,50.6]|  6.6|
 # |[8.7,48.9,75.0]|  7.2|
 # |[13.1,0.4,25.6]|  5.3|
-# |[17.2,4.1,31.6]|  5.9|
 # +---------------+-----+
 # only showing top 5 rows
  
 testData.show(5)
-# +---------------+-----+
-# |       features|label|
-# +---------------+-----+
-# | [0.7,39.6,8.7]|  1.6|
-# |[7.3,28.1,41.4]|  5.5|
-# |[7.8,38.9,50.6]|  6.6|
-# | [8.4,27.2,2.1]|  5.7|
-# |  [8.6,2.1,1.0]|  4.8|
-# +---------------+-----+
+# +----------------+-----+
+# |        features|label|
+# +----------------+-----+
+# |  [0.7,39.6,8.7]|  1.6|
+# | [7.3,28.1,41.4]|  5.5|
+# |  [8.4,27.2,2.1]|  5.7|
+# |   [8.6,2.1,1.0]|  4.8|
+# |[11.7,36.9,45.2]|  7.3|
+# +----------------+-----+
 # only showing top 5 rows
 ```
 
@@ -343,17 +343,16 @@ lr = LinearRegression()
 lrModel = lr.fit(trainingData)
 predictions = lrModel.transform(testData)
 predictions.show(5)
-# +---------------+-----+------------------+
-# |       features|label|        prediction|
-# +---------------+-----+------------------+
-# | [0.7,39.6,8.7]|  1.6|10.747053521791575|
-# |[7.3,28.1,41.4]|  5.5| 8.739267994907486|
-# |[7.8,38.9,50.6]|  6.6|10.853656383110796|
-# | [8.4,27.2,2.1]|  5.7| 8.688254830484485|
-# |  [8.6,2.1,1.0]|  4.8|3.7976587156993284|
-# +---------------+-----+------------------+
+# +----------------+-----+------------------+
+# |        features|label|        prediction|
+# +----------------+-----+------------------+
+# |  [0.7,39.6,8.7]|  1.6|10.497359087823323|
+# | [7.3,28.1,41.4]|  5.5| 8.615626828376815|
+# |  [8.4,27.2,2.1]|  5.7|  8.59859112486577|
+# |   [8.6,2.1,1.0]|  4.8| 4.027845382391438|
+# |[11.7,36.9,45.2]|  7.3| 10.41211129446484|
+# +----------------+-----+------------------+
 # only showing top 5 rows
-
 ```
 
 You may see some warnings, which are normal.
@@ -366,7 +365,7 @@ from pyspark.ml.evaluation import RegressionEvaluator
 evaluator = RegressionEvaluator(labelCol="label",predictionCol="prediction",metricName="rmse")
 rmse = evaluator.evaluate(predictions)
 print("Root Mean Squared Error (RMSE) on test data = %g" % rmse)
-# Root Mean Squared Error (RMSE) on test data = 1.92078
+# Root Mean Squared Error (RMSE) on test data = 1.87125
 ```
 
 ### Example: Machine Learning Pipeline for Document Classification
