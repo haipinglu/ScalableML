@@ -427,21 +427,21 @@ qsub Lab1_SubmitBatch.sh # or qsub HPC/Lab1_SubmitBatch.sh if you are at /home/a
 
 Two important notes
 
-- Make sure that your `.sh` file, e.g. `myfile.sh`, has linux/unix rather than windows line ending. To check, do the following on HPC
+- Make sure that your `.sh` file, e.g. `myfile.sh`, has Linux/Unix rather than Windows line ending. To check, do the following on HPC
   
   ```sh
   [abc1de@sharc-node004 HPC]$ file myfile.sh
   myfile.sh: ASCII text, with CRLF line terminators  # Output
   ```
 
-  In the above example, it shows the file has "CRLF line terminators", which will not be recognised by linux/unix. You can fix it by
+  In the above example, it shows the file has "CRLF line terminators", which will not be recognised by Linux/Unix. You can fix it by
 
   ```sh
   [ac1hlu@sharc-node004 HPC]$ dos2unix myfile.sh
   dos2unix: converting file myfile.sh to Unix format ...  # Output
   ```
   
-  Now check again, and it shows no "CRLF line terminators", which means it is now in the linux/unix line endings.
+  Now check again, and it shows no "CRLF line terminators", which means it is now in the Linux/Unix line endings and ready to go.
 
   ```sh
   [ac1hlu@sharc-node004 HPC]$ file myfile.sh
