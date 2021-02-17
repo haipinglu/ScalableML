@@ -391,7 +391,7 @@ spark.stop()
 
 See [how to submit batch jobs to ShARC](https://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/submit.html#running-batch-jobs) and follow the instructions for **SGE**. **Reminder:** The more resources you request, the longer you need to queue.
 
-Interactive mode will be good for learning, exploring and debugging, with smaller data. For big data, it will be more convenient to use batch processing. You submit the job to the node to join a queue. Once allocated, your job will run, with output properly recorded. This is done via a shell script. **Warning: Do not create such a file under WINDOWS text format** (see the *line ending warning* above).
+Interactive mode will be good for learning, exploring and debugging, with smaller data. For big data, it will be more convenient to use batch processing. You submit the job to the node to join a queue. Once allocated, your job will run, with output properly recorded. This is done via a shell script. 
 
 Create a file `Lab1_SubmitBatch.sh`
 
@@ -425,12 +425,35 @@ cd HPC
 qsub Lab1_SubmitBatch.sh # or qsub HPC/Lab1_SubmitBatch.sh if you are at /home/abc1de/com6012/ScalableML
 ```
 
-Make sure that you are at the correct directory and the file exists using `pwd` (the current working directory) and `ls` (list the content). Check the status of your queuing/running job(s) using `qstat` (jobs not shown are finished already). `qw` means the job is in the queue and waiting to be scheduled. `eqw` means the job is waiting in error state, in which case you should check the error and use `qdel JOB_ID` to delete the job. If you want to print out the working directory when your code is running, you would use
+Two important notes
 
-```python
-import os
-print(os.getcwd())
-```
+- Make sure that your `.sh` file, e.g. `myfile.sh`, has linux/unix rather than windows line ending. To check, do the following on HPC
+  
+  ```sh
+  [abc1de@sharc-node004 HPC]$ file myfile.sh
+  myfile.sh: ASCII text, with CRLF line terminators  # Output
+  ```
+
+  In the above example, it shows the file has "CRLF line terminators", which will not be recognised by linux/unix. You can fix it by
+
+  ```sh
+  [ac1hlu@sharc-node004 HPC]$ dos2unix myfile.sh
+  dos2unix: converting file myfile.sh to Unix format ...  # Output
+  ```
+  
+  Now check again, and it shows no "CRLF line terminators", which means it is now in the linux/unix line endings.
+
+  ```sh
+  [ac1hlu@sharc-node004 HPC]$ file myfile.sh
+  myfile.sh: ASCII text  # Output
+  ```
+
+- Make sure that you are at the correct directory and the file exists using `pwd` (the current working directory) and `ls` (list the content). Check the status of your queuing/ running job(s) using `qstat` (jobs not shown are finished already). `qw` means the job is in the queue and waiting to be scheduled. `eqw` means the job is waiting in error state, in which case you should check the error and use `qdel JOB_ID` to delete the job. If you want to print out the working directory when your code is running, you would use
+
+  ```python
+  import os
+  print(os.getcwd())
+  ```
 
 Check your output file, which is **`COM6012_Lab1.txt`** in the `Output` folder specified with option **`-o`** above. You can change it to a name you like. A sample output file named `COM6012_Lab1_SAMPLE.txt` is now in the GitHub `Output` folder. The results are
 
