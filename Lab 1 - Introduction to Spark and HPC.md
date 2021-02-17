@@ -445,14 +445,14 @@ Hello Spark: There are 71600 hosts from Japan.
   In the above example, it shows the file has "CRLF line terminators", which will not be recognised by Linux/Unix. You can fix it by
 
   ```sh
-  [ac1hlu@sharc-node004 HPC]$ dos2unix myfile.sh
+  [abc1de@sharc-node004 HPC]$ dos2unix myfile.sh
   dos2unix: converting file myfile.sh to Unix format ...  # Output
   ```
   
   Now check again, and it shows no "CRLF line terminators", which means it is now in the Linux/Unix line endings and ready to go.
 
   ```sh
-  [ac1hlu@sharc-node004 HPC]$ file myfile.sh
+  [abc1de@sharc-node004 HPC]$ file myfile.sh
   myfile.sh: ASCII text  # Output
   ```
 
