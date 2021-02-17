@@ -425,7 +425,15 @@ cd HPC
 qsub Lab1_SubmitBatch.sh # or qsub HPC/Lab1_SubmitBatch.sh if you are at /home/abc1de/com6012/ScalableML
 ```
 
-[Two important notes](#two-important-notes)
+Check your output file, which is **`COM6012_Lab1.txt`** in the `Output` folder specified with option **`-o`** above. You can change it to a name you like. A sample output file named `COM6012_Lab1_SAMPLE.txt` is now in the GitHub `Output` folder. The results are
+
+```sh
+Hello Spark: There are 35924 hosts from UK.
+
+Hello Spark: There are 71600 hosts from Japan.
+```
+
+#### Two important notes
 
 - Make sure that your `.sh` file, e.g. `myfile.sh`, has Linux/Unix rather than Windows line ending. To check, do the following on HPC
   
@@ -454,14 +462,6 @@ qsub Lab1_SubmitBatch.sh # or qsub HPC/Lab1_SubmitBatch.sh if you are at /home/a
   import os
   print(os.getcwd())
   ```
-
-Check your output file, which is **`COM6012_Lab1.txt`** in the `Output` folder specified with option **`-o`** above. You can change it to a name you like. A sample output file named `COM6012_Lab1_SAMPLE.txt` is now in the GitHub `Output` folder. The results are
-
-```sh
-Hello Spark: There are 35924 hosts from UK.
-
-Hello Spark: There are 71600 hosts from Japan.
-```
 
 ## 5. Exercises (reference solutions will be provided on the following Monday)
 
