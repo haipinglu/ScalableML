@@ -147,7 +147,7 @@ model = als.fit(training)
 # 21/02/19 09:34:31 WARN LAPACK: Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
 ```
 
-The warnings on BLAS and LAPACK are about [optimised numerical processing](https://spark.apache.org/docs/latest/ml-guide.html#dependencies). The warning messages mean that a pure JVM implementation will be used instead of the optimised ones, which need to be [installed separately)(https://spark.apache.org/docs/latest/ml-linalg-guide.html). We are not installing them in this module but if you may try on your own machine (not HPC due to access right) if interested.
+The warnings on BLAS and LAPACK are about [optimised numerical processing](https://spark.apache.org/docs/latest/ml-guide.html#dependencies). The warning messages mean that a pure JVM implementation will be used instead of the optimised ones, which need to be [installed separately](https://spark.apache.org/docs/latest/ml-linalg-guide.html). We are not installing them in this module but if you may try on your own machine (not HPC due to access right) if interested.
 
 Evaluate the model by computing the RMSE on the test data:
 
