@@ -82,7 +82,7 @@ The cold-start problem refers to the cases when some users and/or items in the t
 
 #### MovieLens100k
 
-Let us use the [MovieLens 100K Dataset](https://grouplens.org/datasets/movielens/100k/) to study movie recommendation using ALS.
+Let's study ALS for movie recommendation on the [MovieLens 100K Dataset](https://grouplens.org/datasets/movielens/100k/).
 
 ```python
 from pyspark.ml.evaluation import RegressionEvaluator
