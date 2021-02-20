@@ -80,6 +80,10 @@ The ratings can also be used differently. We can treat them as numbers represent
 
 The cold-start problem refers to the cases when some users and/or items in the test dataset were not present during training the model. In Spark, these users and items are either assigned `NaN` (not a number, default) or dropped (option `drop`).
 
+#### MovieLens100k
+
+Let us use the [MovieLens 100K Dataset](https://grouplens.org/datasets/movielens/100k/) to study movie recommendation using ALS.
+
 ```python
 from pyspark.ml.evaluation import RegressionEvaluator
 from pyspark.ml.recommendation import ALS
