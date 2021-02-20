@@ -13,10 +13,10 @@
 
 **Suggested reading**:
 
-- [Spark Overview](https://spark.apache.org/docs/latest/index.html)
-- [Spark Quick Start](https://spark.apache.org/docs/latest/quick-start.html) (Choose **Python** rather than the default *Scala*)
+- [Spark Overview](https://spark.apache.org/docs/3.0.1/index.html)
+- [Spark Quick Start](https://spark.apache.org/docs/3.0.1/quick-start.html) (Choose **Python** rather than the default *Scala*)
 - Chapters 2 to 4 of [PySpark tutorial](https://runawayhorse001.github.io/LearningApacheSpark/pyspark.pdf) (several sections in Chapter 3 can be safely skipped)
-- Reference: [PySpark documentation](https://spark.apache.org/docs/latest/api/python/index.html#)
+- Reference: [PySpark documentation](https://spark.apache.org/docs/3.0.1/api/python/index.html#)
 - Reference: [PySpark source code](https://github.com/apache/spark/tree/master/python)
 
 **Note - Please READ before proceeding**:
@@ -194,7 +194,7 @@ Run pyspark (optionally, specify to use multiple cores):
 pyspark  # pyspark --master local[4] for 4 cores
 ```
 
-You will see the spark splash above. `spark` ([SparkSession](https://spark.apache.org/docs/2.1.0/api/python/pyspark.sql.html?highlight=sparksession#pyspark.sql.SparkSession)) and `sc` ([SparkContext](https://spark.apache.org/docs/latest/api/python/pyspark.html#pyspark.SparkContext)) are automatically created.
+You will see the spark splash above. `spark` ([SparkSession](https://spark.apache.org/docs/2.1.0/api/python/pyspark.sql.html?highlight=sparksession#pyspark.sql.SparkSession)) and `sc` ([SparkContext](https://spark.apache.org/docs/3.0.1/api/python/pyspark.html#pyspark.SparkContext)) are automatically created.
 
 Check your SparkSession and SparkContext object and you will see something like
 
@@ -480,7 +480,7 @@ You are encouraged to try out in the pyspark shell first to figure out the right
 
 ### More log mining questions
 
-You are encouraged to explore these more challenging questions by consulting the [`pyspark.sql` APIs](https://spark.apache.org/docs/latest/api/python/pyspark.sql.html) to learn more. We will not provide solutions but Session 2 will make answering these questions easier.
+You are encouraged to explore these more challenging questions by consulting the [`pyspark.sql` APIs](https://spark.apache.org/docs/3.0.1/api/python/pyspark.sql.html) to learn more. We will not provide solutions but Session 2 will make answering these questions easier.
 
 - How many **unique** hosts on a particular day (e.g., 15th August)?
 - How many **unique** hosts in total (i.e., in August 1995)?

@@ -10,10 +10,10 @@
 
 ### Suggested reading
 
-- [Collaborative Filtering in Spark](https://spark.apache.org/docs/latest/ml-collaborative-filtering.html)
-- [DataBricks movie recommendations tutorial](https://github.com/databricks/spark-training/blob/master/website/movie-recommendation-with-mllib.md). [DataBricks](https://en.wikipedia.org/wiki/Databricks) is a company founded by the creators of Apache Spark. Check out their latest packages at [their GitHub page](https://github.com/databricks). They offer a free (up to 15GB memory) cloud computing platform [Databricks Community Edition](https://community.cloud.databricks.com/login.html) that you can try out.
+- [Collaborative Filtering in Spark](https://spark.apache.org/docs/3.0.1/ml-collaborative-filtering.html)
+- [DataBricks movie recommendations tutorial](https://github.com/databricks/spark-training/blob/master/website/movie-recommendation-with-mllib.md). [DataBricks](https://en.wikipedia.org/wiki/Databricks) is a company founded by the creators of Apache Spark. Check out their packages at [their GitHub page](https://github.com/databricks). They offer a free (up to 15GB memory) cloud computing platform [Databricks Community Edition](https://community.cloud.databricks.com/login.html) that you can try out.
 - [Collaborative Filtering on Wiki](http://en.wikipedia.org/wiki/Recommender_system#Collaborative_filtering)
-- [Python API on ALS for recommender system](https://spark.apache.org/docs/latest/api/python/pyspark.ml.html#pyspark.ml.recommendation.ALS)
+- [Python API on ALS for recommender system](https://spark.apache.org/docs/3.0.1/api/python/pyspark.ml.html#pyspark.ml.recommendation.ALS)
 - Chapter *ALS: Stock Portfolio Recommendations* (particularly Section *Demo*) of [PySpark tutorial](https://runawayhorse001.github.io/LearningApacheSpark/pyspark.pdf) 
 
 ### PySpark APIs in pictures (highly recommended)
@@ -37,7 +37,7 @@ Let's start a pyspark shell with 2 cores using a regular queue:
 
 [Collaborative filtering](http://en.wikipedia.org/wiki/Recommender_system#Collaborative_filtering) is a classic approach for recommender systems. These techniques aim to fill in the missing entries of a user-item association matrix primarily based on the matrix *itself*.  `spark.ml` currently supports **model-based** collaborative filtering, in which users and products are described by a small set of latent factors that can be used to predict missing entries, using the **alternating least squares (ALS)** algorithm. 
 
-[API](https://spark.apache.org/docs/latest/api/python/pyspark.ml.html#module-pyspark.ml.recommendation): `class pyspark.ml.recommendation.ALS(rank=10, maxIter=10, regParam=0.1, numUserBlocks=10, numItemBlocks=10, implicitPrefs=False, alpha=1.0, userCol='user', itemCol='item', seed=None, ratingCol='rating', nonnegative=False, checkpointInterval=10, intermediateStorageLevel='MEMORY_AND_DISK', finalStorageLevel='MEMORY_AND_DISK', coldStartStrategy='nan', blockSize=4096)`
+[API](https://spark.apache.org/docs/3.0.1/api/python/pyspark.ml.html#module-pyspark.ml.recommendation): `class pyspark.ml.recommendation.ALS(rank=10, maxIter=10, regParam=0.1, numUserBlocks=10, numItemBlocks=10, implicitPrefs=False, alpha=1.0, userCol='user', itemCol='item', seed=None, ratingCol='rating', nonnegative=False, checkpointInterval=10, intermediateStorageLevel='MEMORY_AND_DISK', finalStorageLevel='MEMORY_AND_DISK', coldStartStrategy='nan', blockSize=4096)`
 
 The following parameters are available:
 
@@ -147,7 +147,7 @@ model = als.fit(training)
 # 21/02/19 09:34:31 WARN LAPACK: Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
 ```
 
-The warnings on BLAS and LAPACK are about [optimised numerical processing](https://spark.apache.org/docs/latest/ml-guide.html#dependencies). The warning messages mean that a pure JVM implementation will be used instead of the optimised ones, which need to be [installed separately](https://spark.apache.org/docs/latest/ml-linalg-guide.html). We are not installing them in this module but if you may try on your own machine (not HPC due to access right) if interested.
+The warnings on BLAS and LAPACK are about [optimised numerical processing](https://spark.apache.org/docs/3.0.1/ml-guide.html#dependencies). The warning messages mean that a pure JVM implementation will be used instead of the optimised ones, which need to be [installed separately](https://spark.apache.org/docs/3.0.1/ml-linalg-guide.html). We are not installing them in this module but if you may try on your own machine (not HPC due to access right) if interested.
 
 Evaluate the model by computing the RMSE on the test data:
 
