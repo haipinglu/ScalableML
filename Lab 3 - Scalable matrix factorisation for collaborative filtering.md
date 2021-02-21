@@ -275,33 +275,6 @@ dfItemFactors.show()
 # only showing top 20 rows
 ```
 
-`describe().show()` is very handy to inspect your (big) data for understanding/debugging. Try to use it more often to see.
-
-```python
-dfItemFactors.describe().show()
-# +-------+-----------------+
-# |summary|               id|
-# +-------+-----------------+
-# |  count|             1652|
-# |   mean|830.6483050847457|
-# | stddev|481.7646649639072|
-# |    min|                1|
-# |    max|             1682|
-# +-------+-----------------+
-
-allmovies = ratings.select(als.getItemCol()).distinct()
-allmovies.describe().show()
-# +-------+-----------------+
-# |summary|          movieId|
-# +-------+-----------------+
-# |  count|             1682|
-# |   mean|            841.5|
-# | stddev|485.6958925088827|
-# |    min|                1|
-# |    max|             1682|
-# +-------+-----------------+
-```
-
 ## 2. Exercises
 
 ### More movie recommendations
