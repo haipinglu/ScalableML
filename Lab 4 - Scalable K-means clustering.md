@@ -5,7 +5,7 @@
 ## Study schedule
 
 - [Task 1](#1-Space-management-and-Spark-configuration): To finish by Wednesday. **Critical**
-- [Task 2](#2-$k$-means-clustering): To finish by Thursday. **Essential**
+- [Task 2](#2-k-means-clustering): To finish by Thursday. **Essential**
 - [Task 3](#3-exercises): To finish before the next Monday. ***Exercise***
 - [Task 4](#4-additional-ideas-to-explore-optional): To explore further. *Optional*
 
