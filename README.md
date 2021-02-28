@@ -10,7 +10,7 @@ This edition uses [**PySpark 3.0.1**](https://spark.apache.org/docs/latest/api/p
 * Session 1: Introduction to Spark and HPC
 * Session 2: RDD, DataFrame, ML pipeline, & parallelization
 * Session 3: Scalable matrix factorisation for collaborative filtering in recommender systems
-* Session 4: Scalable K-means clustering
+* Session 4: Scalable k-means clustering
 * Session 5: Scalable PCA for dimensionality reduction and data types in Spark
 * Session 6: Advanced decision trees
 * Session 7: Scalable logistic regression
