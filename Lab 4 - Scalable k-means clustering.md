@@ -243,8 +243,7 @@ The example below is based on Chapter *Clustering* of [PySpark tutorial](https:/
 #### Load and inspect the [iris data](https://archive.ics.uci.edu/ml/datasets/iris)
 
 ```python
-df = spark.read.load("Data/iris.csv",
-                     format="csv", inferSchema="true", header="true")
+df = spark.read.load("Data/iris.csv", format="csv", inferSchema="true", header="true").cache()
 df.show(5,True)
 # +------------+-----------+------------+-----------+-------+
 # |sepal_length|sepal_width|petal_length|petal_width|species|
@@ -288,7 +287,7 @@ Use a `transData` function similar to that in Lab 2 to convert the attributes in
 def transData(data):
     return data.rdd.map(lambda r: [Vectors.dense(r[:-1])]).toDF(['features'])
 
-dfFeatureVec= transData(df)
+dfFeatureVec= transData(df).cache()
 dfFeatureVec.show(5, False)
 # +-----------------+
 # |features         |
