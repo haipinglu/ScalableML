@@ -238,9 +238,9 @@ model2.clusterCenters()
 
 ### Iris clustering
 
-The example below is based on Chapter *Clustering* of [PySpark tutorial](https://runawayhorse001.github.io/LearningApacheSpark/pyspark.pdf), with some changes introduced.
+Clustering of the [Iris flower data set](https://en.wikipedia.org/wiki/Iris_flower_data_set) is a classical example [discussed the Wikipedia page of $k$-means clustering](https://en.wikipedia.org/wiki/K-means_clustering#Discussion). This data set was introduced by [Ronald Fisher](https://en.wikipedia.org/wiki/Ronald_Fisher), "the father of modern statistics and experimental design" (and thus machine learning) and also "the greatest biologist since Darwin". The code below is based on Chapter *Clustering* of [PySpark tutorial](https://runawayhorse001.github.io/LearningApacheSpark/pyspark.pdf), with some changes introduced.
 
-#### Load and inspect the [iris data](https://archive.ics.uci.edu/ml/datasets/iris)
+#### Load and inspect the data
 
 ```python
 df = spark.read.load("Data/iris.csv", format="csv", inferSchema="true", header="true").cache()
