@@ -115,7 +115,7 @@ SparkSession available as 'spark'.
 
 **File recovery**: your files on HPC are regularly backed up as snapshots so you could recover files from them following the instructions on [recovering files from snapshots](https://docs.hpc.shef.ac.uk/en/latest/hpc/filestore.html#recovering-files-from-snapshots).
 
-### 1.4 *Optional: Install PySpark on your own machine-  
+### 1.4 *Optional: Install PySpark on your own machine*  
 
 This module focuses on the HPC terminal. You are expected to use the HPC terminal to complete the labs. ALL assessments use the HPC terminal.
 
