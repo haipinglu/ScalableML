@@ -37,6 +37,8 @@ This time, let's request for 4 cores using a regular queue and 10GB of memory, f
    conda install -y matplotlib
   ```
 
+If the request *could not be scheduled*, try to reduce the number of cores (and/or the amount of memory) requested and/or use the reserved queue `-P rse-com6012`.
+
 You can either clone `ScalableML` from GitHub to `/data/abc1de/ScalableML` (again `abc1de` should be your username) via
 
 ```sh
