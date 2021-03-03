@@ -1,4 +1,4 @@
-# Lab 4: $k$-means clustering
+# Lab 4: $k$-means clustering and Spark configuration
 
 [COM6012 Scalable Machine Learning **2021**](https://github.com/haipinglu/ScalableML) by [Haiping Lu](http://staffwww.dcs.shef.ac.uk/people/H.Lu/) at The University of Sheffield
 
