@@ -4,8 +4,8 @@
 
 ## Study schedule
 
-- [Task 1](#1-): To finish by Wednesday. **Essential**
-- [Task 2](#2-): To finish by Thursday. **Essential**
+- [Task 1](#1-Data-Types-in-RDD-based-API): To finish by Wednesday. **Essential**
+- [Task 2](#2-PCA): To finish by Thursday. **Essential**
 - [Task 3](#3-exercises): To finish before the next Monday. ***Exercise***
 - [Task 4](#4-additional-ideas-to-explore-optional): To explore further. *Optional*
 
