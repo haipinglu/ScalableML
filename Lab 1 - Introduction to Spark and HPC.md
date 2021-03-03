@@ -109,7 +109,7 @@ SparkSession available as 'spark'.
 
 **Terminal/command line**: learn the [basic use of the command line](https://github.com/mikecroucher/Intro_to_HPC/blob/gh-pages/terminal_tutorial.md) in Linux, e.g. use `pwd` to find out your **current directory**.
 
-**Transfer files**: learn how to [transfer files to/from ShARC HPC](https://www.sheffield.ac.uk/it-services/research/hpc/using/access). In MobaXterm, you can [drag and drop files](https://usdrcg.gitbook.io/docs/lawrence-hpc/transferring-files#:~:text=In%20MobaXterm%2C%20the%20file%20explorer,either%20computer%20as%20you%20desire.) between HPC and your local machine.
+**Transfer files**: learn how to [transfer files to/from ShARC HPC](https://www.sheffield.ac.uk/it-services/research/hpc/using/access). I recommend [MobaXterm](https://mobaxterm.mobatek.net/) for Windows and [FileZilla](https://filezilla-project.org/) for Mac/Linux. In MobaXterm, you can [drag and drop files](https://usdrcg.gitbook.io/docs/lawrence-hpc/transferring-files#:~:text=In%20MobaXterm%2C%20the%20file%20explorer,either%20computer%20as%20you%20desire.) between HPC and your local machine.
 
 **Line ending warning**: if you are using Windows, you should be aware that [line endings differ between Windows and Linux](https://stackoverflow.com/questions/426397/do-line-endings-differ-between-windows-and-linux). If you edit a shell script (below) in Windows, make sure that you use a Unix/Linux compatible editor or do the conversion before using it on HPC.
 
