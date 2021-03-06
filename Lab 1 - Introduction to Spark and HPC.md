@@ -458,7 +458,7 @@ Hello Spark: There are 71600 hosts from Japan.
   myfile.sh: ASCII text  # Output
   ```
 
-- Make sure that you are at the correct directory and the file exists using `pwd` (the current working directory) and `ls` (list the content). Check the status of your queuing/ running job(s) using `qstat` (jobs not shown are finished already). `qw` means the job is in the queue and waiting to be scheduled. `eqw` means the job is waiting in error state, in which case you should check the error and use `qdel JOB_ID` to delete the job. If you want to print out the working directory when your code is running, you would use
+- Make sure that you are at the correct directory and the file exists using `pwd` (the current working directory) and `ls` (list the content). Check the status of your queuing/ running job(s) using `qstat` (jobs not shown are finished already). `qw` means the job is in the queue and waiting to be scheduled. `eqw` means the job is waiting in error state, in which case you should check the error and use `qdel JOB_ID` to delete the job. `r` means the job is running. If you want to print out the working directory when your code is running, you would use
 
   ```python
   import os
