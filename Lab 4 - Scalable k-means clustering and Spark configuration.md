@@ -107,7 +107,7 @@ The amount of memory specified about should not exceed the amount you requested 
 You may search for example usage, an example that we used in the past **for very big data** is here for your reference only:
 
 ```sh
-spark-submit --driver-memory 40g --executor-memory 2g --master local[10] -- local.dir /fastdata/USERNAME --conf spark.driver.maxResultSize=4g test.py
+spark-submit --driver-memory 40g --executor-memory 2g --master local[10] --conf spark.driver.maxResultSize=4g test.py
 ```
 
 A reminder that the more resources you request, the longer you need to wait for them to become available to you.
