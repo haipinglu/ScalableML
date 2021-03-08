@@ -12,7 +12,7 @@ This edition uses [**PySpark 3.0.1**](https://spark.apache.org/docs/latest/api/p
 * Session 3: Scalable matrix factorisation for collaborative filtering in recommender systems
 * Session 4: Scalable k-means clustering and Spark configuration
 * Session 5: Scalable PCA for dimensionality reduction and Spark data types
-* Session 6: Advanced decision trees
+* Session 6: Scalable decision trees and ensemble models
 * Session 7: Scalable logistic regression
 * Session 8: Scalable generalized linear models
 * Session 9: Scalable neural networks
@@ -27,6 +27,8 @@ The materials are built with references to the following sources:
 * The official [Apach Spark documentations](https://spark.apache.org/). *Note: the **latest information** is here.*
 * The [PySpark tutorial](https://runawayhorse001.github.io/LearningApacheSpark/) by [Wenqiang Feng](http://web.utk.edu/~wfeng1/) with [PDF - Learning Apache Spark with Python Release v1.0](https://runawayhorse001.github.io/LearningApacheSpark/pyspark.pdf). Also see [GitHub Project Page](https://github.com/runawayhorse001/LearningApacheSpark). *Note: last update in Feb 2020.*
 * The [**Introduction to Apache Spark** course by A. D. Joseph, University of California, Berkeley](https://www.edx.org/course/introduction-apache-spark-uc-berkeleyx-cs105x). *Note: archived.*
+* The book [Learning Spark: Lightning-Fast Data Analytics](https://databricks.com/p/ebook/learning-spark-from-oreilly), 2nd Edition, O'Reilly by Jules S. Damji, Brooke Wenig, Tathagata Das & Denny Lee.
+* The book [**Spark: The Definitive Guide**](https://books.google.co.uk/books/about/Spark.html?id=urjpAQAACAAJ&redir_esc=y) by Bill Chambers and Matei Zaharia. There is also a Repository for [code](https://github.com/databricks/Spark-The-Definitive-Guide) from the book.
 
 Many thanks to
 
