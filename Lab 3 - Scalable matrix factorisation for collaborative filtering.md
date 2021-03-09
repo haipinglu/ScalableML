@@ -43,7 +43,7 @@ The following parameters are available:
 
 - *rank*: the number of latent factors in the model (defaults to 10).
 - *maxIter* is the maximum number of iterations to run (defaults to 10).
-- *regParam*: the regularization parameter in ALS (defaults to 1.0).
+- *regParam*: the regularization parameter in ALS (defaults to 0.1).
 - *numUserBlocks*/*numItemBlocks*: the number of blocks the users and items will be partitioned into in order to parallelize computation (defaults to 10).
 - *implicitPrefs*: whether to use the explicit feedback ALS variant or one adapted for implicit feedback data (defaults to false which means using explicit feedback).
 - *alpha*: a parameter applicable to the implicit feedback variant of ALS that governs the baseline confidence in preference observations (defaults to 1.0).
