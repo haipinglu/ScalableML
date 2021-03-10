@@ -74,7 +74,7 @@ When you are asked whether to proceed, say `y`. Python 3.6.3 allows pasting mult
 
 #### Activate the environment
 
-`conda activate myspark`
+`source activate myspark`
 
 You **must** see `(myspark) [abc1de@sharc-nodeXXX ~]$`, i.e. **(myspark)** in front, before proceeding. Otherwise, you did not get the proper environment. Check the above steps. 
 
