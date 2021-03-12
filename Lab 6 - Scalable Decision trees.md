@@ -11,7 +11,7 @@
 
 ## Introduction
 
-In this notebook we will explore the classes in PySpark that implement decision trees, random forests and gradient-boosted trees. We will study both classification and regression. The implementations for random forests and gradient-boosted trees heavliy rely on the implementations for decision trees.
+In this lab, we will explore the classes in PySpark that implement decision trees, random forests and gradient-boosted trees. We will study both classification and regression. The implementations for random forests and gradient-boosted trees heavliy rely on the implementations for decision trees.
 
 There are several challenges when implementing decision trees in a distributed setting, particularly when we want to use [commodity hardware](https://en.wikipedia.org/wiki/Commodity_computing). A very popular implementation is known as [PLANET: Massively Parallel Learning of Tree Ensembles with MapReduce](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36296.pdf). PLANET allows an efficient implementation of decision trees at large scale purely using map() and reduce() operations, suitable for a Hadoop cluster. Although the Decision Tree implementation in [Apache Spark borrows some of the ideas from PLANET](http://jmlr.org/papers/volume17/15-237/15-237.pdf), it also introduces additional tricks that exploit the well-known advantages of Apache Spark, e.g. in memory computing. The Apache Spark implementation of the DecisionTree classifier may not be as flexible as the scikit-learn one (bear in mind they were designed under a different sets of restrictions), but it still allows the use of such a powerful machine learning model at large scale.
 
