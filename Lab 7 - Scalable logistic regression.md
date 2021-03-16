@@ -6,7 +6,7 @@
 
 - [Section 1](#1-logistic-regression-in-PySpark): To finish by Wednesday. **Essential**
 - [Section 2](#2-Exercises): To finish before Thursday. ***Exercise***
-- [Section 3](#3-additional-exercises-optional): To explore further. *Optional*
+- [Section 3](#3-additional-exercise-optional): To explore further. *Optional*
 
 
 ## Introduction
