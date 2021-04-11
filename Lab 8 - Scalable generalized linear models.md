@@ -197,7 +197,7 @@ Compare the performance of Linear Regression over the same dataset using the fol
 
 1. Linear Regression using $\ell_1$ regularisation and optimisation OWL-QN.
 2. Linear Regression using elasticNet regularisation and optimisation OWL-QN.
-3. Linear Regression using $\ell_2$ regularisation and optimisation L-BGFS.
+3. Linear Regression using $\ell_2$ regularisation and optimisation L-BFGS.
 4. Linear Regression using $\ell_2$ regularisation and optimisation IRLS.
 
 ## 3. Additional exercise (optional)
