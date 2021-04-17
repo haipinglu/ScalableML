@@ -11,7 +11,7 @@
 
 ## Introduction
 
-In this notebook we will explore the use of the neural network model that comes implemented in Spark ML. We will also look at Pandas UDFs that allow to efficiently use models trained on a single machine using frameworks different to Spark ML, e.g. TensorFlow, Scikit-learn, and but keeping the benefits of Spark to apply such models to large datasets.  
+In this notebook we will explore the use of the neural network model that comes implemented in Spark ML. We will also look at Pandas UDFs that allow to efficiently use models trained on a single machine using frameworks different to Spark ML, e.g. TensorFlow, Scikit-learn, but keeping the benefits of Spark to apply such models to large datasets.  
 
 
 **Dependencies.** For this lab, we need to install the packages ``pyarrow``, ``matplotlib``, ``pandas``, ``numpy``, ``tensorflow``, ``keras``, ``temp``, and `scikit-learn`. You may have already installed some of these packages before. Make sure you install these packages in the environment **myspark**
