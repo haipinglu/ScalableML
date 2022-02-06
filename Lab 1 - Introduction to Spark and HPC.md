@@ -2,6 +2,8 @@
 
 [COM6012 Scalable Machine Learning **2022**](https://github.com/haipinglu/ScalableML) by [Haiping Lu](https://haipinglu.github.io/) at The University of Sheffield
 
+**Accompanying lectures**: [YouTube video lectures recorded in Year 2020/21.](https://www.youtube.com/watch?v=iS9ytjKWpro&list=PLuRoUKdWifzwUoKwu-HyRhnlIaQh8o_Qd)
+
 ## Study schedule
 
 - [Task 1](#1-connect-to-hpc-and-install-spark): To finish in the lab session on 10th Feb. **Critical**
