@@ -71,6 +71,8 @@ Type `qrshx` for a *regular- node **or** `qrshx -P rse-com6012` for a com6012-re
 [abc1de@sharc-node*** ~]$  # *** is the node number
 ```
 
+Otherwise, try `qrshx` or `qrshx -P rse-com6012` again. You will not be able to run the following commands if you are still on the login node.
+
 #### Load Java and conda
 
 `module load apps/java/jdk1.8.0_102/binary`
