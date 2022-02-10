@@ -404,7 +404,7 @@ spark.stop()
 
 ### Run a program in batch mode
 
-See [how to submit batch jobs to ShARC](https://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/submit.html#running-batch-jobs) and follow the instructions for **SGE**. **Reminder:** The more resources you request, the longer you need to queue.
+See [how to submit batch jobs to ShARC](https://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/index.html#batch-jobs) and follow the instructions for **SGE**. **Reminder:** The more resources you request, the longer you need to queue.
 
 Interactive mode will be good for learning, exploring and debugging, with smaller data. For big data, it will be more convenient to use batch processing. You submit the job to the node to join a queue. Once allocated, your job will run, with output properly recorded. This is done via a shell script. 
 
