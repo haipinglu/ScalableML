@@ -1,0 +1,100 @@
+<html><head>
+<title> NASA-HTTP - Two Months of HTTP Logs from the KSC-NASA WWW Server
+</title></head><body>
+<!-- @(#) $Header: /home/portnoy/u4/vern/ITA/html/contrib/RCS/NASA-HTTP.html,v 1.2 2004/04/18 00:35:10 vern Exp $ (LBL)-->
+<h1>
+<em>NASA-HTTP</em>
+</h1>
+<dl>
+<dt>
+<b>Description</b>
+<dd>
+These two traces contain two month's worth of all HTTP requests to the 
+NASA Kennedy Space Center WWW server in Florida.
+<dt>
+<b>Format</b>
+<dd>
+The logs are an ASCII file with one line per request, with the following
+columns:
+<ol>
+<li><b>host</b> making the request.  A hostname when possible, otherwise
+the Internet address if the name could not be looked up.
+<li><b>timestamp</b> in the format "DAY MON DD HH:MM:SS YYYY", where
+<b>DAY</b> is the day of the week, <b>MON</b> is the name of the month,
+<b>DD</b> is the day of the month, <b>HH:MM:SS</b>
+is the time of day using a 24-hour clock, and <b>YYYY</b> is the year.
+The timezone is -0400.
+<li><b>request</b> given in quotes.
+<li><b>HTTP reply code</b>.
+<li><b>bytes in the reply</b>.
+</ol>
+<dt>
+<b>Measurement</b>
+<dd>
+The first log was collected from 00:00:00 July 1, 1995 through 
+23:59:59 July 31, 1995, a total of 31 days.  The second log was 
+collected from 00:00:00 August 1, 1995 through 23:59:59 Agust 31, 1995,
+a total of 7 days.  In this two week period there were 
+3,461,612 requests.  Timestamps have 1 second resolution.  Note that
+from 01/Aug/1995:14:52:01 until 03/Aug/1995:04:36:13 there are no accesses
+recorded, as the Web server was shut down, due to Hurricane Erin.  
+<dt>
+<b>Privacy</b>
+<dd>
+The logs fully preserve the originating host and HTTP request.
+Please do not however attempt any analysis beyond general traffic patterns.
+<dt>
+<b>Acknowledgements</b>
+<dd>
+The logs was collected by
+Jim Dumoulin of the Kennedy Space Center,
+and contributed by Martin Arlitt (<em>mfa126@cs.usask.ca</em>)
+and Carey Williamson (<em>carey@cs.usask.ca</em>) of the University
+of Saskatchewan.
+<dt>
+<b>Publications</b>
+<dd>
+This is one of six data sets analyzed in an upcoming paper by
+<br>
+M. Arlitt and C. Williamson, entitled 
+``Web Server Workload Characterization:  The Search for Invariants'',
+to appear in the proceedings of the 
+<EM>1996 ACM SIGMETRICS Conference on the Measurement and Modeling of
+ Computer Systems</EM>, Philadelphia, PA,
+May 23-26, 1996.  An
+<a href="ftp://ftp.cs.usask.ca/pub/discus/paper.96-3.ps.Z">
+<em>extended version</em></a> of this paper is available on-line; see
+also the
+<a href="http://www.cs.usask.ca/projects/discus/discus.html">
+<em> DISCUS home page</em></a> and the group's
+<a href="http://www.cs.usask.ca/projects/discus/discus_pub.html">
+<em> publications</em></a>.
+<dt>
+<b>Related</b>
+<dd>
+Permission has been granted to make four of the six data sets discussed
+in ``Web Server Workload Characterization:  The Search for Invariants''
+available.  The four data sets are:
+<a href="Calgary-HTTP.html" > Calgary-HTTP </a>, 
+<a href="ClarkNet-HTTP.html" > ClarkNet-HTTP </a>, 
+<a href="NASA-HTTP.html" > NASA-HTTP </a>, and
+<a href="Sask-HTTP.html" > Saskatchewan-HTTP </a>. 
+<dt>
+<b>Restrictions</b>
+<dd>
+The traces may be freely redistributed.
+<dt>
+<b>Distribution</b>
+<dd>
+Available from the Archive in
+<a href="ftp://ita.ee.lbl.gov/traces/NASA_access_log_Jul95.gz">
+<b>Jul 01 to Jul 31, ASCII format, 20.7 MB gzip compressed</b></a>,
+205.2 MB uncompressed, and
+<a href="ftp://ita.ee.lbl.gov/traces/NASA_access_log_Aug95.gz">
+<b>Aug 04 to Aug 31, ASCII format, 21.8 MB gzip compressed</b></a>,
+167.8 MB uncompressed.
+</dl>
+<br><br>
+Up to
+<a href=../traces.html> Traces In The Internet Traffic Archive</a>.
+</body></html>

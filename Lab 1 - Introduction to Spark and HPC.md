@@ -371,7 +371,7 @@ The output is verbose so I did not show all (see `Output/COM6012_Lab1_SAMPLE.txt
 
 ## 4. Big Data Log Mining with Spark
 
-**Data**: Download the August data in gzip (NASA_access_log_Aug95.gz) from [NASA HTTP server access log](http://ita.ee.lbl.gov/html/contrib/NASA-HTTP.html) (this file is uploaded to `ScalableML/Data` if you have problems downloading, so actually it is already downloaded on your HPC earlier) and put into your `Data` folder. `NASA_Aug95_100.txt` above is the first 100 lines of the August data.
+**Data**: Download the August data in gzip (NASA_access_log_Aug95.gz) from [NASA HTTP server access log](Data/NASA-HTTP.html) (this file is uploaded to `ScalableML/Data` if you have problems downloading, so actually it is already downloaded on your HPC earlier) and put into your `Data` folder. `NASA_Aug95_100.txt` above is the first 100 lines of the August data.
 
 **Question**: How many accesses are from Japan and UK respectively?
 
