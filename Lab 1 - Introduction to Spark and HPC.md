@@ -48,7 +48,7 @@ Following the [official instructions](https://docs.hpc.shef.ac.uk/en/latest/hpc/
 ssh -X $USER@sharc.shef.ac.uk  # -X is optional as we do not show graphics directly so simply ssh $USER@sharc.shef.ac.uk will do
 ```
 
-You need to replace `$USER` with your username, let's assume it is `abc1de`. If successful, you should see 
+You need to replace `$USER` with your username. Let's assume it is `abc1de`, then you do `ssh -X abc1de@sharc.shef.ac.uk` (no `$`). If successful, you should see 
 
 `[abc1de@sharc-login1 ~]$`
 
@@ -65,7 +65,11 @@ You need to replace `$USER` with your username, let's assume it is `abc1de`. If 
 
 #### Start an interactive session
 
-Type `qrshx` for a *regular- node **or** `qrshx -P rse-com6012` for a com6012-reserved node
+Type `qrshx` for a *regular- node **or** `qrshx -P rse-com6012` for a com6012-reserved node. If successful, you should see 
+
+```sh
+[abc1de@sharc-node*** ~]$  # *** is the node number
+```
 
 #### Load Java and conda
 
