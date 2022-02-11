@@ -236,6 +236,8 @@ Let us do some simple computing (squares)
 
 ## 3. Log Mining with Spark - Example
 
+**NOTE:** Review the two [important notes](https://github.com/haipinglu/ScalableML/blob/master/Lab%201%20-%20Introduction%20to%20Spark%20and%20HPC.md#two-important-notes) below about the common problems of line ending and relative path, and how to deal with them.
+
 This example deals with **Semi-Structured** data in a text file.
 
 Firstly, you need to **make sure the file is in the proper directory and change the file path if necessary**, on either HPC or local machine, e.g. using ``pwd` to see the current directly, `ls` (or `dir` in Windows) to see the content. Also review how to [**transfer files to HPC**](https://docs.hpc.shef.ac.uk/en/latest/hpc/transferring-files.html) and [MobaXterm tips](#MobaXterm-tips) for Windows users.
