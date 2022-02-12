@@ -236,7 +236,7 @@ Let us do some simple computing (squares)
 
 ## 3. Log Mining with Spark - Example
 
-**NOTE:** Review the two [important notes](https://github.com/haipinglu/ScalableML/blob/master/Lab%201%20-%20Introduction%20to%20Spark%20and%20HPC.md#two-important-notes) below about the common problems of line ending and relative path, and how to deal with them.
+**NOTE:** Review the two [common causes](https://github.com/haipinglu/ScalableML/blob/master/Lab%201%20-%20Introduction%20to%20Spark%20and%20HPC.md#common-causes) to the `file not found` or `cannot open file` errors below (line ending and relative path problems), and how to deal with them.
 
 This example deals with **Semi-Structured** data in a text file.
 
@@ -456,7 +456,9 @@ Hello Spark: There are 35924 hosts from UK.
 Hello Spark: There are 71600 hosts from Japan.
 ```
 
-#### Two important notes
+#### Common problems
+
+Common causes and fixes to `file not found` or `cannot open file` errors
 
 - Make sure that your `.sh` file, e.g. `myfile.sh`, has Linux/Unix rather than Windows line ending. To check, do the following on HPC
   
