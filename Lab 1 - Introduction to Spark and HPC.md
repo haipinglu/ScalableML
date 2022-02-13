@@ -83,7 +83,7 @@ Otherwise, try `qrshx` or `qrshx -P rse-com6012` again. You will not be able to 
 
 `conda create -n myspark python=3.6.2`
 
-When you are asked whether to proceed, say `y`. Python 3.6.3 allows pasting multiple lines.
+When you are asked whether to proceed, say `y`. Python 3.6.2 allows pasting multiple lines.
 
 #### Activate the environment
 
