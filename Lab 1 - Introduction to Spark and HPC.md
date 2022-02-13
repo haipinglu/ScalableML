@@ -10,7 +10,7 @@
 - [Task 2](#2-run-pyspark): To finish in the lab session on 10th Feb. **Critical**
 - [Task 3](#3-log-mining-with-spark---example): To finish in the lab session on 10th Feb. **Essential**
 - [Task 4](#4-big-data-log-mining-with-spark): To finish in the lab session on 10th Feb. **Essential**
-- [Task 5](#5-exercises-reference-solutions-will-be-provided-on-the-following-monday): To finish by the following Tuesday 15th Feb. ***Exercise***
+- [Task 5](#5-exercises-reference-solutions-will-be-provided-on-the-following-wednesday): To finish by the following Tuesday 15th Feb. ***Exercise***
 - [Task 6](#6-additional-ideas-to-explore-optional-no-solutions-will-be-provided): To explore further. *Optional*
 
 **Suggested reading**:
