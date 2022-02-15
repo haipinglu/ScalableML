@@ -305,7 +305,7 @@ The labels here are real numbers and this is a **regression** problem. For **cla
 (trainingData, testData) = transformed.randomSplit([0.6, 0.4], 6012)
 ```
 
-We set the `seed=6012` in the above (see the [randomSplit API](https://spark.apache.org/docs/3.2.1/api/python/pyspark.sql.html#pyspark.sql.DataFrame.randomSplit) )Check your train and test data as follows. It is a good practice to *keep tracking your data during prototype phase*.
+We set the `seed=6012` in the above (see the [randomSplit API](https://spark.apache.org/docs/3.2.1/api/python/reference/api/pyspark.sql.DataFrame.randomSplit.html) )Check your train and test data as follows. It is a good practice to *keep tracking your data during prototype phase*.
 
 ```python
 trainingData.show(5)
@@ -335,7 +335,7 @@ testData.show(5)
 
 #### Fit a linear regression Model and perform prediction
 
-More details on parameters can be found in the [Python API documentation](https://spark.apache.org/docs/3.2.1/api/python/pyspark.ml.html#pyspark.ml.regression.LinearRegression).
+More details on parameters can be found in the [Python API documentation](https://spark.apache.org/docs/3.2.1/api/python/reference/api/pyspark.ml.regression.LinearRegression.html).
 
 ```python
 from pyspark.ml.regression import LinearRegression
