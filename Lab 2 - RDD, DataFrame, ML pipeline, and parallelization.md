@@ -274,7 +274,7 @@ The example below is based on **Section 9.1** of [PySpark tutorial](https://runa
 
 #### Convert the data to dense vector (features and label)
 
-Let us convert the above data in CSV format to a typical (feature, label) pair for supervised learning. Here we use the [`Vectors` API](https://spark.apache.org/docs/3.2.1/api/python/pyspark.ml.html#pyspark.ml.linalg.Vectors). You may also review the [lambda expressions in python](https://docs.python.org/3/tutorial/controlflow.html#lambda-expressions).
+Let us convert the above data in CSV format to a typical (feature, label) pair for supervised learning. Here we use the [`Vectors` API](https://spark.apache.org/docs/3.2.1/api/python/reference/api/pyspark.ml.linalg.Vectors.html). You may also review the [lambda expressions in python](https://docs.python.org/3/tutorial/controlflow.html#lambda-expressions).
 
 ```python
 from pyspark.sql import Row
