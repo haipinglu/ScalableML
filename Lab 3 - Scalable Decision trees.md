@@ -23,7 +23,7 @@ Before you continue, open a new terminal in [ShARC](https://docs.hpc.shef.ac.uk/
 `module load apps/java/jdk1.8.0_102/binary`
 
 `module load apps/python/conda`
-1
+
 `source activate myspark`
 
 You can now use pip to install the packages using
