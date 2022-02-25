@@ -358,16 +358,16 @@ vecAssembler = VectorAssembler(inputCols = spam_names[0:ncolumns-1], outputCol =
             **standardization**: whether to standardize the training features before fitting the model. It can be true or false (True by default).
             
 The function to optimise has the form
-$$
-f(\mathbf{w}) = LL(\mathbf{w}) + \lambda\Big[\alpha\|\mathbf{w}\|_1 + (1-\alpha)\frac{1}{2}\|\mathbf{w}\|_2\Big],
-$$
+           
+$$f(\mathbf{w}) = LL(\mathbf{w}) + \lambda\Big[\alpha\|\mathbf{w}\|_1 + (1-\alpha)\frac{1}{2}\|\mathbf{w}\|_2\Big]$$
+ 
 where $LL(\mathbf{w})$ is the logistic loss given as
+
 $$
 LL(\mathbf{w}) = \sum_{n=1}^N \log[1+\exp(-y_n\mathbf{w}^{\top}\mathbf{x}_n)].
 $$
 
 Let us train different classifiers on the same training data. We start with logistic regression, without regularization, so $\lambda=0$.
-
 
 
 ```python
