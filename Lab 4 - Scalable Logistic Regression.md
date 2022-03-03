@@ -518,7 +518,7 @@ for i, prec in enumerate(lrModel1.summary.precisionByLabel):
 
 ## 3. Exercises
 
-**Note**: A *reference* solution will be provided in Blackboard for this part by the following Wednesday (the latest), before the quiz.
+**Note**: A *reference* solution will be provided in Blackboard for this part by the following Wednesday (the latest).
 
 
 ### Exercise 1
