@@ -20,6 +20,10 @@ This edition uses [**PySpark 3.3.1**](https://spark.apache.org/docs/3.3.1/api/py
 
 You can also download the [Spring 2022 version](https://github.com/haipinglu/ScalableML/archive/refs/tags/v2022.zip) for preview or reference.
 
+### An Introduction to Transparent Machine Learning
+
+Haiping and Shuo have recently developed a course on [An Introduction to Transparent Machine Learning](https://pykale.github.io/transparentML/), part of the [Alan Turing Institute’s online learning courses in responsible AI](https://www.turing.ac.uk/funding-call-online-learning-courses-responsible-ai). If interested, you can refer to this introductory course with emphasis on transparency in machine learning to assist you in your learning of scalable machine learning.
+
 ### Acknowledgement
 
 The materials are built with references to the following sources:
