@@ -88,7 +88,7 @@ When you are asked whether to proceed, say `y`. When seeing `Please update conda
 
 `conda activate myspark`
 
-You **must** see `(myspark) [abc1de@sharc-nodeXXX ~]$`, i.e. **(myspark)** in front, before proceeding. Otherwise, you did not get the proper environment. Check the above steps.
+Please use `source activate myspark` if `conda activate` does not work. You **must** see `(myspark) [abc1de@sharc-nodeXXX ~]$`, i.e. **(myspark)** in front, before proceeding. Otherwise, you did not get the proper environment. Check the above steps.
 
 #### Install pyspark 3.3.1 using `pip`
 
