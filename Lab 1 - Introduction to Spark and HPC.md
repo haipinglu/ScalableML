@@ -44,14 +44,14 @@ Use your university **username** such as `abc18de` and the associated password t
 Following the [official instructions](https://docs.hpc.shef.ac.uk/en/latest/hpc/connecting.html) for [Windows](https://docs.hpc.shef.ac.uk/en/latest/hpc/connecting.html#ssh-client-software-on-windows) or [Mac OS/X and Linux](https://docs.hpc.shef.ac.uk/en/latest/hpc/connecting.html#ssh-client-software-on-mac-os-x-and-linux) to open a terminal and connect to sharc via SSH by
 
 ```sh
-ssh -X $USER@sharc.shef.ac.uk  # -X is optional as we do not show graphics directly so simply ssh $USER@sharc.shef.ac.uk will do
+ssh $USER@sharc.shef.ac.uk  # Use lowercase for your username, without `$`
 ```
 
-You need to replace `$USER` with your username. Let's assume it is `abc1de`, then you do `ssh -X abc1de@sharc.shef.ac.uk` (no `$`). If successful, you should see 
+You need to replace `$USER` with your username. Let's assume it is `abc1de`, then you do `ssh abc1de@sharc.shef.ac.uk` (using **lowercase** and without `$`). If successful, you should see 
 
 `[abc1de@sharc-login1 ~]$`
 
-`abc1de` should be your username. 
+`abc1de` should be your username.
 
 #### MobaXterm tips
 
