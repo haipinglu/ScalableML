@@ -460,7 +460,7 @@ Hello Spark: There are 35924 hosts from UK.
 Hello Spark: There are 71600 hosts from Japan.
 ```
 
-#### Common problems
+#### Common problem: `file not found` or `cannot open file`
 
 Common causes and fixes to `file not found` or `cannot open file` errors
 
@@ -491,6 +491,15 @@ Common causes and fixes to `file not found` or `cannot open file` errors
   import os
   print(os.getcwd())
   ```
+
+#### Common problem: `spark-submit: command not found`
+
+If you have verified that you can run the same command in interactive mode, but cannot run it in batch mode, it may be due to the environment you are using has been corrupted.
+
+I suggest you to remove and re-install the environment. You can do this by
+
+1. Remove the `myspark` environment by running `conda remove --name myspark --all`, following [conda's managing environments documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#removing-an-environment) and redo Lab 1 (i.e. install everything) to see whether you can run spark-submit in batch mode again.
+2. Delete the `myspark` environment (folder) at `/home/abc1de/.conda/envs/myspark` via the terminal folder window on the left of the screen on mobax term or use linux command. Then redo Lab 1 (i.e. install everything) to see whether you can run spark-submit in batch mode again.
 
 ## 5. Exercises (reference solutions will be provided on the following Wednesday)
 
