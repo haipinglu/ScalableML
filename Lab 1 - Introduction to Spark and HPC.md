@@ -86,9 +86,9 @@ When you are asked whether to proceed, say `y`. When seeing `Please update conda
 
 #### Activate the environment
 
-`conda activate myspark`
+`source activate myspark`
 
-Please use `source activate myspark` if `conda activate` does not work. You **must** see `(myspark) [abc1de@sharc-nodeXXX ~]$`, i.e. **(myspark)** in front, before proceeding. Otherwise, you did not get the proper environment. Check the above steps.
+The prompt says to use `conda activate myspark` but it does not always work. You **must** see `(myspark) [abc1de@sharc-nodeXXX ~]$`, i.e. **(myspark)** in front, before proceeding. Otherwise, you did not get the proper environment. Check the above steps.
 
 #### Install pyspark 3.3.1 using `pip`
 
@@ -437,7 +437,7 @@ module load apps/java/jdk1.8.0_102/binary
 
 module load apps/python/conda
 
-conda activate myspark
+source activate myspark
 
 spark-submit ../Code/LogMiningBig.py  # .. is a relative path, meaning one level up
 ```
