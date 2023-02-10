@@ -445,7 +445,7 @@ spark-submit ../Code/LogMiningBig.py  # .. is a relative path, meaning one level
 - Get necessary files on your ShARC.
 - Start a session with command `qrshx`.
 - Go to the `HPC` directory to submit your job via the `qsub` command (can be run at the **login node**).
-- The output file will be under `HPC`.
+- The output file will be under `Output`.
 
 ```sh
 cd HPC
