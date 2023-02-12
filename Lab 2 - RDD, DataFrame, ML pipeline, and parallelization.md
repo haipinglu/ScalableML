@@ -88,7 +88,7 @@ def inside(p):
 NUM_SAMPLES = 10000000
 count = sc.parallelize(range(0, NUM_SAMPLES),8).filter(inside).count()
 print("Pi is roughly %f" % (4.0 * count / NUM_SAMPLES))
-# Pi is roughly 3.139747
+# Pi is roughly 3.140986
 ```
 
 Note that we did not control the seed above so you are not likely to get exactly the same number `3.139747`. You can change `NUM_SAMPLES` to see the difference in precision and time cost.
