@@ -499,7 +499,8 @@ If you have verified that you can run the same command in interactive mode, but 
 I suggest you to remove and re-install the environment. You can do this by
 
 1. Remove the `myspark` environment by running `conda remove --name myspark --all`, following [conda's managing environments documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#removing-an-environment) and redo Lab 1 (i.e. install everything) to see whether you can run spark-submit in batch mode again.
-2. Delete the `myspark` environment (folder) at `/home/abc1de/.conda/envs/myspark` via the terminal folder window on the left of the screen on mobax term or use linux command. Then redo Lab 1 (i.e. install everything) to see whether you can run spark-submit in batch mode again.
+2. If the above does not work, delete the `myspark` environment (folder) at `/home/abc1de/.conda/envs/myspark` via the terminal folder window on the left of the screen on mobax term or use linux command. Then redo Lab 1 (i.e. install everything) to see whether you can run spark-submit in batch mode again.
+3. If the above still does not work, you may have installed `pyspark==3.3.1` wrongly, e.g. before but not after activating the `myspark` environment. If you made this mistake, when reinstalling `pyspark==3.3.1`, you may be prompted with `Requirement already satisfied: pyspark==3.3.1` and `Requirement already satisfied: py4j==0.10.9.5`. To fix the problem, you can try unstall `pyspark` and `py4j` before activating `myspark` environment by `pip uninstall pyspark==3.3.1` and `pip uninstall py4j==0.10.9.5` and then activate the `myspark` environment by `source activate myspark` and reinstall pyspark by `pip install pyspark==3.3.1`.
 
 ## 5. Exercises (reference solutions will be provided on the following Wednesday)
 
