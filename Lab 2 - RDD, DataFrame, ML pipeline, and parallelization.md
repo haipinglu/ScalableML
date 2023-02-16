@@ -480,7 +480,7 @@ for row in selected.collect():
 
 ## 4. Exercises
 
-**Note**: A *reference* solution will be provided in Blackboard for this part by the following Wednesday.
+**Note**: A *reference* solution will be provided in Blackboard for this part by the following Thursday.
 
 Starting from this lab, you need to use *as many DataFrame functions as possible*.
 
