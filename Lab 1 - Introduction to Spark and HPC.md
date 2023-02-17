@@ -61,7 +61,7 @@ You need to replace `$USER` with your username. Let's assume it is `abc1de`, the
 - You can open multiple sessions (but do not open more than what you need as these are shared resources).
 - YOu can directly open a file to edit and then save it.
 
-#### (Optional) **Remote VSCode Server** for writing/managing code
+#### (Optional) **VSCode Remote HPC** for writing/managing code
 - You can use VSCode to write and manage your code and scripts on HPC by following the [VSCode Remote HPC instructions](https://github.com/rcgsheffield/vscoderemote_sheffield_hpc).
 - After performing the steps in the above repo, you will be able to 1) start a remote code server on the HPC and 2) connect to it via your web browser and edit/manage your code with access to the remote filesystem on the HPC.
 - Using VSCode via the browser provides similar functionality as a desktop VSCode installation but having some restrictions on the marketplace and extensions. See [Why can't code-server use Microsoft's extension marketplace?](https://coder.com/docs/code-server/latest/FAQ#why-cant-code-server-use-microsofts-extension-marketplace).
