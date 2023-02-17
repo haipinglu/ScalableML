@@ -60,6 +60,13 @@ You need to replace `$USER` with your username. Let's assume it is `abc1de`, the
 - You can DRAG your file or folder to the left directory pane of MobaXterm.
 - You can open multiple sessions (but do not open more than what you need as these are shared resources).
 
+#### 1.1.1 Setup and use a *Remote VS Code Server* as an alternative to vim/nano to write and manage your code
+- If you would like to use VS Code to write and manage your code and scripts as an alternative to using vim/nano on the cluster nodes, please follow the instructions available at https://github.com/rcgsheffield/vscoderemote_sheffield_hpc
+- After performing the steps in the above repo you will be able to 1) start a remote code server on the HPC cluster and 2) connect to it via your web browser and edit/manage your code with access to the remote filesystem on the HPC cluster.
+- Using VS Code via the browser provides similar functionality as a desktop VS code installation barring some restrictions on the marketplace and extensions. Read https://coder.com/docs/code-server/latest/FAQ#why-cant-code-server-use-microsofts-extension-marketplace for more info.
+
+**NOTE:** While using VS code provides a level of convenience, it is also good to get familiar with writing and managing code from the terminal using vim/nano.
+
 ### 1.2 Set up the environment and install PySpark
 
 #### Start an interactive session
