@@ -1,4 +1,4 @@
-# Lab 4: Scalable logistic regression
+# Lab 3: Scalable logistic regression
 
 ## Study schedule
 
@@ -9,9 +9,27 @@
 
 ## Introduction
 
-In this lab, we will explore the performance of Logistic Regression on the datasets we already used in the Notebook for Decision Trees for Classification, [Lab 3](https://github.com/haipinglu/ScalableML/blob/master/Lab%203%20-%20Scalable%20Decision%20trees.md).
+**Dependencies.** For this lab, we need to install the ``matplotlib`` and `pandas` packages. Make sure you install the packages in the environment **myspark**
 
-Before we work on Logistic Regression, though, let us briefly look at the different filestore systems available in ShARC and different Spark configurations that are necessary to develop a well performing Spark job.
+Before you continue, open a new terminal in [ShARC](https://docs.hpc.shef.ac.uk/en/latest/hpc/index.html), use the `rse-com6012` queue with four nodes, and activate the **myspark** environment
+
+`module load apps/java/jdk1.8.0_102/binary`
+
+`module load apps/python/conda`
+
+`source activate myspark`
+
+You can now use pip to install the packages using
+
+`pip install matplotlib pandas`
+
+**You only need to install matplotlib and pandas in your environment once.**
+
+The dataset that we will use is from the [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/index.php), where UCI stands for University of California Irvine. The UCI repository is and has been a valuable resource in Machine Learning. It contains datasets for classification, regression, clustering and several other machine learning problems. These datasets are open source and they have been uploaded by contributors of many research articles.
+
+The particular dataset that we will use wil be referred to is the [Spambase Dataset](http://archive.ics.uci.edu/ml/datasets/Spambase). A detailed description is in the previous link. The dataset contains 57 features related to word frequency, character frequency, and others related to capital letters. The description of the features and labels in the dataset is available [here](http://archive.ics.uci.edu/ml/machine-learning-databases/spambase/spambase.names). The output label indicated whether an email was considered 'ham' or 'spam', so it is a binary label.
+
+Before we work on Logistic Regression, though, let us briefly look at the different file storage systems available in ShARC and different Spark configurations that are necessary to develop a well performing Spark job.
 
 ## 1. Data storage in ShARC and Spark configuration
 
