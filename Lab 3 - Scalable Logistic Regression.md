@@ -472,8 +472,6 @@ spam_names[np.argmax(np.abs(w_L1))]
 
     'char_freq_$'
 
-This last result is consistent with the most relevant feature given by the [Decision Tree Classifier of Lab 3](https://github.com/haipinglu/ScalableML/blob/master/Lab%203%20-%20Scalable%20Decision%20trees.md).
-
 A useful method for the logistic regression model is the [summary](https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.ml.classification.LogisticRegressionSummary.html) method.
 
 ```python
