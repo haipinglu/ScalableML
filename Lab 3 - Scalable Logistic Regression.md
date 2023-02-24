@@ -5,7 +5,7 @@
 - [Section 1](#1-data-storage-in-sharc-and-spark-configuration): To finish by 24th February. **Essential**
 - [Section 2](#2-logistic-regression-in-pyspark): To finish by 24th February. **Essential**
 - [Section 3](#3-exercises): To finish by the following Wednesday 1st March. ***Exercise***
-- [Section 4](#4-additional-exercises-optional): To explore further. *Optional*
+- [Section 4](#4-additional-exercise-optional): To explore further. *Optional*
 
 ## Introduction
 
