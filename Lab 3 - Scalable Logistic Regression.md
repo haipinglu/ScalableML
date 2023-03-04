@@ -1,5 +1,9 @@
 # Lab 3: Scalable logistic regression
 
+### Modified by Shuo Zhou, 19th February 2023
+
+#### 25th February 2022 Mauricio A Álvarez
+
 ## Study schedule
 
 - [Section 1](#1-data-storage-in-sharc-and-spark-configuration): To finish by 24th February. **Essential**
