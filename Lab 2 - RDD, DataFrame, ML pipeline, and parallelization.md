@@ -39,7 +39,7 @@ Firstly, we follow the standard steps as in Task 2 of Lab 1 but with some variat
 
    ```sh
    qrshx -P rse-com6012 -pe smp 4 # request 4 CPU cores using our reserved queue
-   source myspark.sh # assuming HPC/myspark.sh is under the root directory, otherwise, see Lab 1 Task 2
+   source myspark.sh # assuming HPC/myspark.sh is under your root directory, otherwise, see Lab 1 Task 2
    conda install -y numpy # install numpy, to be used in Task 3. This ONLY needs to be done ONCE. NOT every time.
    cd com6012/ScalableML # our main working directory
    pyspark --master local[4] # start pyspark with 4 cores requested above.
