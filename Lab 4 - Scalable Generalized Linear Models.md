@@ -1,5 +1,9 @@
 # Lab 4: Scalable Generalized Linear Models
 
+### Modified by Shuo Zhou, 26th February 2023
+
+#### 28th February 2022 Mauricio A Álvarez
+
 ## Study schedule
 
 - [Section 1](#1-glms-in-pyspark): To finish by 3rd March. **Essential**
