@@ -19,31 +19,11 @@ There are several challenges when implementing decision trees in a distributed s
 
 You can find more technical details on the implementation of Decision Trees in Apache Spark in the youtube video [Scalable Decision Trees in Spark MLlib](https://www.youtube.com/watch?v=N453EV5gHRA&t=10m30s) by Manish Amde and the youtube video [Decision Trees on Spark](https://www.youtube.com/watch?v=3WS9OK3EXVA) by Joseph Bradley. These technical details are also reviewed in a [blog post on decision trees](https://databricks.com/blog/2014/09/29/scalable-decision-trees-in-mllib.html) and another [blog post on random forests](https://databricks.com/blog/2015/01/21/random-forests-and-boosting-in-mllib.html).
 
-**Dependencies.** For this lab, we need to install the ``matplotlib`` and `pandas` packages. Make sure you install the packages in the environment **myspark**
-
-Before you continue, open a new terminal in [ShARC](https://docs.hpc.shef.ac.uk/en/latest/hpc/index.html), use the `rse-com6012` queue with four nodes, and activate the **myspark** environment
-
-`module load apps/java/jdk1.8.0_102/binary`
-
-`module load apps/python/conda`
-
-`source activate myspark`
-
-You can now use pip to install the packages using
-
-`pip install matplotlib pandas`
-
 **You only need to install matplotlib and pandas in your environment once.**
 
 ## 1. Decision trees in PySpark
 
-We will build a decision tree classifier that will be able to detect spam from the text in an email. We already saw this example using [scikit-learn](https://scikit-learn.org/stable/) in the previous module [COM6509 Machine Learning and Adaptive Intelligence](https://github.com/maalvarezl/MLAI). The Notebook is in [this link](https://colab.research.google.com/github/maalvarezl/MLAI/blob/master/Labs/Lab%203%20-%20Decision%20trees%20and%20ensemble%20methods.ipynb).  
-
-The dataset that we will use is from the [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/index.php), where UCI stands for University of California Irvine. The UCI repository is and has been a valuable resource in Machine Learning. It contains datasets for classification, regression, clustering and several other machine learning problems. These datasets are open source and they have been uploaded by contributors of many research articles.
-
-The particular dataset that we will use wil be referred to is the [Spambase Dataset](http://archive.ics.uci.edu/ml/datasets/Spambase). A detailed description is in the previous link. The dataset contains 57 features related to word frequency, character frequency, and others related to capital letters. The description of the features and labels in the dataset is available [here](http://archive.ics.uci.edu/ml/machine-learning-databases/spambase/spambase.names). The output label indicated whether an email was considered 'ham' or 'spam', so it is a binary label.
-
-After installing `matplotlib` and `pandas`, go to the folder `ScalableML` in your terminal and open pyspark.
+In this lab, we will explore the performance of Decision Trees on the datasets we already used in the Notebook for Logistic Regression for Classification, [Lab 3](https://github.com/haipinglu/ScalableML/blob/master/Lab%203%20-%20Scalable%20Logistic%20Regression.md).
 
 We now load the dataset and load the names of the features and label that we will use to create the schema for the dataframe. We also cache the dataframe since we are going to perform several operations to rawdata inside a loop.
 
@@ -62,7 +42,6 @@ for i in range(number_names):
 
 We use the [<tt>withColumnRenamed</tt>](https://spark.apache.org/docs/3.0.1/api/python/pyspark.sql.html?highlight=withcolumn#pyspark.sql.DataFrame.withColumnRenamed) method for the dataframe to rename the columns using the more familiar names for the features.
 
-
 ```python
 schemaNames = rawdata.schema.names
 spam_names[ncolumns-1] = 'labels'
@@ -73,7 +52,6 @@ for i in range(ncolumns):
 Perhaps one of the most important operations when doing data analytics in Apache Spark consists in preprocessing the dataset so that it can be analysed using the MLlib package. In the case of supervised learning, classification or regression, we want the data into a column of type `Double` for the label and a column of type `SparseVector` or `DenseVector` for the features. In turn, to get this representation of the features as a vector, we first need to transform the individual features to type `Double`.
 
 Let us see first what is the type of the original features after reading the file.
-
 
 ```python
 rawdata.printSchema()
@@ -138,7 +116,7 @@ rawdata.printSchema()
      |-- capital_run_length_longest: string (nullable = true)
      |-- capital_run_length_total: string (nullable = true)
      |-- labels: string (nullable = true)
-    
+
 We notice that all the features and the label are of type `String`. We import the <tt>String</tt> type from pyspark.sql.types, and later use the [<tt>withColumn</tt>](https://spark.apache.org/docs/3.0.1/api/python/pyspark.sql.html?highlight=withcolumn#pyspark.sql.DataFrame.withColumn) method for the dataframe to `cast()` each column to `Double`.
 
 ```python
@@ -215,7 +193,7 @@ rawdata.printSchema()
      |-- capital_run_length_longest: double (nullable = true)
      |-- capital_run_length_total: double (nullable = true)
      |-- labels: double (nullable = true)
-    
+
 We have now a dataframe that contains several columns corresponding to the features, of type double, and the last column corresponding to the labels, also of type double. 
 
 We can now start the machine learning analysis by creating the training and test set and then designing the DecisionTreeClassifier using the training data.
@@ -259,7 +237,7 @@ vecTrainingData.select("features", "labels").show(5)
     |(57,[54,55,56],[1...|   0.0|
     +--------------------+------+
     only showing top 5 rows
-    
+
 The [DecisionTreeClassifier](https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.ml.classification.DecisionTreeClassifier.html#pyspark.ml.classification.DecisionTreeClassifier) implemented in PySpark has several parameters to tune. Some of them are
 
 > **maxDepth**: it corresponds to the maximum depth of the tree. The default is 5.<p>
@@ -303,7 +281,6 @@ plt.savefig("./Output/feature_importances.png")
 
 The feature with the highest importance is 
 
-
 ```python
 spam_names[np.argmax(imp_feat)]
 ```
@@ -311,7 +288,6 @@ spam_names[np.argmax(imp_feat)]
     'char_freq_$'
 
 We can visualise the DecisionTree in the form of *if-then-else* statements.
-
 
 ```python
 print(model.toDebugString)
@@ -607,13 +583,10 @@ print(model.toDebugString)
            Predict: 0.0
         Else (feature 51 > 0.4325)
          Predict: 1.0
-    
-
 
 Indirectly, decision trees allow feature selection: features that allow making decisions in the top of the tree are more relevant for the decision problem.
 
 We can organise the information provided by the visualisation above in the form of a Table using Pandas
-
 
 ```python
 import pandas as pd
@@ -622,9 +595,6 @@ featureImp = pd.DataFrame(
   columns=["feature", "importance"])
 featureImp.sort_values(by="importance", ascending=False)
 ```
-
-
-
 
 <div>
 <table border="1" class="dataframe">
@@ -925,12 +895,9 @@ featureImp.sort_values(by="importance", ascending=False)
 </table>
 </div>
 
-
-
 A better visualisation of the tree in pyspark can be obtained by using, for example, [spark-tree-plotting](https://github.com/julioasotodv/spark-tree-plotting). The trick is to convert the spark tree to a JSON format. Once you have the JSON format, you can visualise it using [D3](https://d3js.org/) or you can transform from JSON to DOT and use graphviz as we did in scickit-learn for the Notebook in MLAI.
 
 **Pipeline** We have not mentioned the test data yet. Before applying the decision tree to the test data, this is a good opportunity to introduce a pipeline that includes the VectorAssembler and the Decision Tree.
-
 
 ```python
 from pyspark.ml import Pipeline
@@ -944,7 +911,6 @@ pipelineModel = pipeline.fit(trainingData)
 
 We finally use the [MulticlassClassificationEvaluator](https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.ml.evaluation.MulticlassClassificationEvaluator.html?highlight=multiclassclassificationevaluator#pyspark.ml.evaluation.MulticlassClassificationEvaluator) tool to assess the accuracy on the test set.
 
-
 ```python
 predictions = pipelineModel.transform(testData)
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
@@ -955,7 +921,6 @@ print("Accuracy = %g " % accuracy)
 ```
 
     Accuracy = 0.915679 
-
 
 ### Decision trees for regression
 
@@ -972,7 +937,7 @@ You will have the opportunity to experiment with the [DecisionTreeRegressor](htt
 
 ## 2. Ensemble methods
 
-We studied the implementation of ensemble methods in scikit-learn in COM6509. See [this notebook](https://colab.research.google.com/github/maalvarezl/MLAI/blob/master/Labs/Lab%203%20-%20Decision%20trees%20and%20ensemble%20methods.ipynb) for a refresher.   
+We studied the implementation of ensemble methods in scikit-learn in COM6509. See [this notebook](https://colab.research.google.com/github/maalvarezl/MLAI/blob/master/Labs/Lab%203%20-%20Decision%20trees%20and%20ensemble%20methods.ipynb) for a refresher.
 
 PySpark implemenst two types of Tree Ensembles, random forests and gradient boosting. The main difference between both methods is the way in which they combine the different trees that compose the ensemble.
 
@@ -983,7 +948,7 @@ The variant of Random Forests implemented in Apache Spark is also known as baggi
 Besides the parameters that we already mentioned for the [DecisionTreeClassifier](https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.ml.classification.DecisionTreeClassifier.html#pyspark.ml.classification.DecisionTreeClassifier) and the [DecisionTreeRegressor](https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.ml.regression.DecisionTreeRegressor.html), the [RandomForestClassifier](https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.ml.classification.RandomForestClassifier.html) and the [RandomForestRegressor](https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.ml.regression.RandomForestRegressor.html) in PySpark require three additional parameters:
 > **numTrees** the total number of trees to train<p>
 **featureSubsetStrategy** number of features to use as candidates for splitting at each tree node. Options include all, onethird, sqrt, log2, [1-n]<p>
-    **subsamplingRate**: size of the dataset used for training each tree in the forest, as a fraction of the size of the original dataset. 
+    **subsamplingRate**: size of the dataset used for training each tree in the forest, as a fraction of the size of the original dataset.
 
 We already did an example of classification with decision trees. Let us use now random forests for performing regression.
 
@@ -1017,15 +982,12 @@ rawdataw.printSchema()
      |-- sulphates: string (nullable = true)
      |-- alcohol: string (nullable = true)
      |-- quality: string (nullable = true)
-    
-
 
 We now follow a very familiar procedure to get the dataset to a format that can be input to Spark MLlib, which consists of:
 1. transforming the data from type string to type double.
 2. creating a pipeline that includes a vector assembler and a random forest regressor.
 
 We first start transforming the data types.
-
 
 ```python
 from pyspark.sql.types import StringType
@@ -1038,7 +1000,6 @@ rawdataw = rawdataw.withColumnRenamed('quality', 'labels')
 ```
 
 Notice that we used the withColumnRenamed method to rename the name of the target feature from 'quality' to 'label'.
-
 
 ```python
 rawdataw.printSchema()
@@ -1057,11 +1018,8 @@ rawdataw.printSchema()
      |-- sulphates: double (nullable = true)
      |-- alcohol: double (nullable = true)
      |-- labels: double (nullable = true)
-    
-
 
 We now partition the data into a training and a test set
-
 
 ```python
 trainingDataw, testDataw = rawdataw.randomSplit([0.7, 0.3], 42)
@@ -1069,13 +1027,11 @@ trainingDataw, testDataw = rawdataw.randomSplit([0.7, 0.3], 42)
 
 Now, we create the pipeline. First, we create the vector assembler.
 
-
 ```python
 vecAssemblerw = VectorAssembler(inputCols=StringColumns[:-1], outputCol="features")
 ```
 
 And now, the Random Forests regressor and the pipeline
-
 
 ```python
 from pyspark.ml.regression import RandomForestRegressor
@@ -1089,7 +1045,6 @@ pipelineModelw = pipeline.fit(trainingDataw)
 ```
 
 We apply now the pipeline to the test data and compute the RMSE between the predictions and the ground truth
-
 
 ```python
 predictions = pipelineModelw.transform(testDataw)
@@ -1185,8 +1140,6 @@ featureImp.sort_values(by="importance", ascending=False)
 </table>
 </div>
 
-
-
 ### Gradient Boosting
 
 In [Gradient Boosting](https://en.wikipedia.org/wiki/Gradient_boosting) or [Gradient-boosted trees](https://en.wikipedia.org/wiki/Gradient_boosting#Gradient_tree_boosting) (GBT), each tree in the ensemble is trained sequentially: the first tree is trained as usual using the training data, the second tree is trained on the residuals between the predictions of the first tree and the labels of the training data, the third tree is trained on the residuals of the predictions of the second tree, etc. The predictions of the ensemble will be the sum of the predictions of each individual tree. The type of residuals are related to the loss function that wants to be minimised. In the PySpark implementations of Gradient-Boosted trees, the loss function for binary classification is the Log-Loss function and the loss function for regression is either the squared error or the absolute error. For details, follow this [link](https://spark.apache.org/docs/latest/mllib-ensembles.html#gradient-boosted-trees-gbts).  
@@ -1226,7 +1179,7 @@ print("RMSE = %g " % rmse)
 
 ## 3. Exercises
 
-**Note**: A *reference* solution will be provided in Blackboard for this part by the following Thursday (06.04.2023).
+**Note**: A *reference* solution will be provided in Blackboard for this part by the following Thursday (27.04.2023).
 
 ### Exercise 1
 
